@@ -63,67 +63,67 @@ The supplied phone captures are ordered by the flow they demonstrate. The filena
 
 ### Account and connectivity
 
-![Account session roster](phone/02-account-session-roster.jpeg)
+<p align="center"><img src="phone/02-account-session-roster.jpeg" alt="Account session roster" width="220"></p>
 
 The signed-in client establishes the user identity and local session context.
 
-![Gateway settings](phone/03-gateway-settings-lan-ip.jpeg)
+<p align="center"><img src="phone/03-gateway-settings-lan-ip.jpeg" alt="Gateway settings" width="220"></p>
 
 The Settings screen shows the gateway URL configured to a server LAN address. Replace the example address with the IPv4 address of the computer running the gateway. For an emulator, use `http://10.0.2.2:8080`; for a physical phone, use `http://SERVER_LOCAL_IP:8080`.
 
-![New chat roster](phone/04-new-chat-roster.jpeg)
+<p align="center"><img src="phone/04-new-chat-roster.jpeg" alt="New chat roster" width="220"></p>
 
 The roster exposes available demo contacts and their activity state.
 
-![Contacts roster](phone/05-contacts-roster.jpeg)
+<p align="center"><img src="phone/05-contacts-roster.jpeg" alt="Contacts roster" width="220"></p>
 
 The contacts view shows the device-to-device demo topology used for chat and call testing.
 
 ### Chat protection
 
-![Tier-1 smoke test](phone/01-chat-tier1-smoke-test.jpeg)
+<p align="center"><img src="phone/01-chat-tier1-smoke-test.jpeg" alt="Tier-1 smoke test" width="220"></p>
 
 A normal chat remains usable while the client displays the analysis indicator and the measured Tier-1 scan latency under the target budget.
 
-![Account request](phone/10-chat-account-request.jpeg)
+<p align="center"><img src="phone/10-chat-account-request.jpeg" alt="Account request" width="220"></p>
 
 An account-number request is marked inline, showing that the client gives feedback at message level rather than waiting for a final transaction.
 
-![Suspicious account chat](phone/08-chat-account-suspicious.jpeg)
+<p align="center"><img src="phone/08-chat-account-suspicious.jpeg" alt="Suspicious account chat" width="220"></p>
 
 The conversation begins to show suspicious-account language and the protected-chat state.
 
-![Medium chat risk](phone/09-chat-medium-risk.jpeg)
+<p align="center"><img src="phone/09-chat-medium-risk.jpeg" alt="Medium chat risk" width="220"></p>
 
 The risk state escalates to Medium as manipulation signals accumulate.
 
-![OTP chat signal](phone/07-chat-otp-signal.jpeg)
+<p align="center"><img src="phone/07-chat-otp-signal.jpeg" alt="OTP chat signal" width="220"></p>
 
 The OTP-oriented message is visible with on-device Tier-1 feedback. This is the critical precursor to the cross-channel call scenario.
 
-![Critical chat alert](phone/06-critical-chat-alert.jpeg)
+<p align="center"><img src="phone/06-critical-chat-alert.jpeg" alt="Critical chat alert" width="220"></p>
 
 The chat flow reaches a critical warning state, demonstrating the client-side alert surface.
 
 ### Call protection
 
-![Medium call warning](phone/11-call-medium-warning.jpeg)
+<p align="center"><img src="phone/11-call-medium-warning.jpeg" alt="Medium call warning" width="220"></p>
 
 The call screen keeps the analysis indicator visible and explains the first warning band.
 
-![Medium warning detail](phone/13-call-medium-warning-detail.jpeg)
+<p align="center"><img src="phone/13-call-medium-warning-detail.jpeg" alt="Medium warning detail" width="220"></p>
 
 A second Medium-state capture shows the warning reasons and live transcript context during the call.
 
-![High call warning](phone/12-call-high-warning.jpeg)
+<p align="center"><img src="phone/12-call-high-warning.jpeg" alt="High call warning" width="220"></p>
 
 The call becomes High risk as requests for credentials and account information accumulate.
 
-![High scam alert](phone/15-call-high-alert.jpeg)
+<p align="center"><img src="phone/15-call-high-alert.jpeg" alt="High scam alert" width="220"></p>
 
 The High-risk call surface offers a clear action to end the call and shows why the user is seeing the warning.
 
-![Critical call alert](phone/14-call-critical-alert.jpeg)
+<p align="center"><img src="phone/14-call-critical-alert.jpeg" alt="Critical call alert" width="220"></p>
 
 The Critical state demonstrates the strongest intervention surface, including the persistent analysis indicator, evidence reasons, transcript context, and safe call controls.
 
