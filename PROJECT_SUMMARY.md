@@ -1,0 +1,9 @@
+# TrustGuard AI — Project Summary
+
+TrustGuard AI is a privacy-first scam interception layer designed for banks and fintech apps. It protects people at the most neglected stage of fraud: the conversation before money moves. A scammer may combine a fake bank call, an urgent chat, and an OTP request; TrustGuard connects those signals across channels in real time instead of judging each message in isolation.
+
+The working prototype includes a Kotlin/Jetpack Compose Android client, a FastAPI realtime gateway, and a React mission-control dashboard. It combines sub-second deterministic Tier-1 rules, a bundled trained local taxonomy classifier, optional Ollama inference, optional cloud model comparison, caller context, speech-to-text support, and explainable risk scores with quoted evidence. Users see why a conversation is suspicious and receive clear safe actions such as independent verification, hanging up, reporting, blocking, or demo account freezing.
+
+The system supports English, Roman Urdu, and Urdu-oriented scam patterns, including bank impersonation, urgency, secrecy, authority pressure, credential harvesting, grooming, and prompt-injection attempts. The dashboard exposes live sessions, risk timelines, evidence history, model latency, provider health, Paste Analyzer reports, and privacy controls. The Android experience keeps analysis visible, while provider keys stay server-side and raw audio is not persisted in the prototype.
+
+TrustGuard AI is not a black-box alarm or a post-transaction fraud report. It is an auditable, user-triggered early-warning system built to help a person pause before an OTP, PIN, card number, or transfer leaves their control. The repository includes a runnable setup script, reproducible demo scenarios, tests, an installable APK, local model artifact, and completed web and Android demonstrations.
