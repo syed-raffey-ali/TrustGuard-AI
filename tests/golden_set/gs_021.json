@@ -1,0 +1,40 @@
+{
+  "id": "gs_021",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "tech_support_impersonation",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "WhatsApp official verification team. Aap ka account kal hack hone wala hai, security alert generate hua hai."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Hack? Kaise pata chala?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "System ne detect kiya. Bachane ke liye abhi jo 6-digit code SMS par aya hai woh mujhe bhej dein."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 46,
+      "text": "Code aa gaya... 772310."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 86,
+      "text": "Shukriya. Aur yeh raaste se apna WhatsApp backup bhi email kar dein, warna data delete ho jayega turant."
+    }
+  ]
+}

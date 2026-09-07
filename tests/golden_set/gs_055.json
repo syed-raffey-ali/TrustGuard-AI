@@ -1,0 +1,34 @@
+{
+  "id": "gs_055",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "printer_fix_legit",
+  "language": "english",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "IT here — saw your ticket about the printer on floor 2. I can swing by in ten minutes."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Oh thanks! It keeps jamming on duplex mode."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 24,
+      "text": "Known issue with the tray roller. I'll swap the part, no charges — it's under AMC."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 44,
+      "text": "Amazing, appreciate the quick response!"
+    }
+  ]
+}

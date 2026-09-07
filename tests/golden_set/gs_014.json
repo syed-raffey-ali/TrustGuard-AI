@@ -1,0 +1,40 @@
+{
+  "id": "gs_014",
+  "label": "scam",
+  "expected_band": "medium",
+  "family": "family_impersonation",
+  "language": "urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "آپ کا بھائی میرے پاس ہے، وہ مشکل میں پھنس گیا ہے۔"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "کس بھائی کی بات کر رہے ہو؟ پہلے نام بتاؤ۔"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 35,
+      "text": "وقت نہیں ہے! پیسے چاہئیں ابھی، ورنہ بہت برا ہو گا۔ ایزی پیسہ پر 30 ہزار بھیجو۔"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 53,
+      "text": "پہلے اس کی آواز سناؤ تو۔"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 98,
+      "text": "وہ بول نہیں سکتا، زخمی ہے! جلدی کرو ورنہ معاملہ خراب ہو جائے گا۔"
+    }
+  ]
+}

@@ -1,0 +1,709 @@
+{
+  "metadata": {
+    "name": "TrustGuard AI - Caller ID Verification Directory",
+    "version": "2.0.0",
+    "last_updated": "2026-08-27",
+    "country": "Pakistan",
+    "supersedes": "v1 fictional-only directory (v1 entries preserved under fictional_banks)",
+    "purpose": "Caller-ID verification database for scam detection. When a caller claims to represent an organization (by name, abbreviation or alias), match the claim against this directory; if the caller's number does not match any official number listed for that organization, surface the entry's 'warning' and apply Family-A impersonation scoring.",
+    "demo_policy": "All demo transcripts, recordings and training scenarios use FICTIONAL institutions only (see fictional_banks; Build Bible Section 17). The real names and numbers in 'organizations' are used exclusively for verification lookups and are never used to generate demo or training content.",
+    "categories": ["bank", "wallet", "telco", "government", "utility", "courier", "tech"],
+    "counts": {
+      "bank": 24,
+      "wallet": 5,
+      "telco": 5,
+      "government": 5,
+      "utility": 12,
+      "courier": 5,
+      "tech": 3
+    },
+    "normalization": {
+      "description": "Normalize both the incoming caller ID and the directory numbers before comparing.",
+      "steps": [
+        "Strip all characters except digits and a leading '+'",
+        "Map letters to telephone keypad digits (ABC=2, DEF=3, GHI=4, JKL=5, MNO=6, PQRS=7, TUV=8, WXYZ=9) so vanity numbers such as +92-21-111-APNA-00 become +92-21-111-2762-00",
+        "Drop the country-code prefix '92' and the trunk prefix '0'; compare the trailing 9-10 digits",
+        "A claim is verified only when BOTH the claimed organization matches (name / short_name / alias, case-insensitive) AND the normalized caller number equals one of that organization's official_numbers",
+        "Some organizations legitimately share helplines or number formats (e.g., MCB and MCB Islamic, SNGPL and SSGC, HBL and HabibMetro); the claimed organization's own entry governs the lookup",
+        "3-5 digit shortcodes (3737, 4444, 786, 345, 310, 333, 123, 555, 1218, ...) are valid for SMS sender comparison only - a voice call can never legitimately originate from a shortcode"
+      ]
+    },
+    "verification_logic": [
+      "Claimed organization found AND caller number matches an official number (normalized) -> emit the platform_official_channel counter-signal (legitimate official channel, taxonomy Family D).",
+      "Claimed organization found AND caller number does NOT match any official number -> surface the entry's warning and score the impersonation label for the entry's category: bank_impersonation, wallet_impersonation, telecom_impersonation, government_impersonation, utility_impersonation, courier_impersonation or tech_support_impersonation (Family A).",
+      "Caller ID matches a suspicious_pattern (e.g., a +92-3XX mobile number) while claiming any organization in this directory -> escalate: banks, wallets, government agencies and utilities never place official outbound calls from personal mobile numbers.",
+      "No organization claimed -> apply suspicious_patterns to the raw caller ID alone (weak signal only).",
+      "fictional_banks entries must NEVER produce real-world verification verdicts; they exist only to keep training/demo data isolated from real verification targets."
+    ],
+    "disclaimer": "Numbers compiled from publicly listed official helplines, UANs and shortcodes for anti-fraud verification. Helplines change over time - re-verify against each organization's official website before production use. This file is not an authorized communication from any listed organization.",
+    "maintenance": "Re-verify all numbers quarterly; on any change, update the entry, bump 'version' (minor) and refresh 'last_updated'."
+  },
+
+  "organizations": [
+    {
+      "name": "Habib Bank Limited",
+      "short_name": "HBL",
+      "aliases": ["HBL", "Habib Bank", "HBL Bank", "HBL Pakistan"],
+      "category": "bank",
+      "official_numbers": ["111-111-425", "051-111-111-425"],
+      "warning": "Caller claims to be from HBL, but this number is not an official HBL line. HBL never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call HBL's official helpline 111-111-425 directly from your own phone."
+    },
+    {
+      "name": "United Bank Limited",
+      "short_name": "UBL",
+      "aliases": ["UBL", "United Bank", "UBL Bank"],
+      "category": "bank",
+      "official_numbers": ["111-825-888"],
+      "warning": "Caller claims to be from UBL, but this number is not an official UBL line. UBL never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call UBL's official helpline 111-825-888 directly from your own phone."
+    },
+    {
+      "name": "MCB Bank Limited",
+      "short_name": "MCB",
+      "aliases": ["MCB", "MCB Bank", "MCB Pakistan"],
+      "category": "bank",
+      "official_numbers": ["111-000-622"],
+      "warning": "Caller claims to be from MCB Bank, but this number is not an official MCB line. MCB never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call MCB's official helpline 111-000-622 directly from your own phone."
+    },
+    {
+      "name": "Allied Bank Limited",
+      "short_name": "ABL",
+      "aliases": ["ABL", "Allied Bank", "Allied Bank of Pakistan"],
+      "category": "bank",
+      "official_numbers": ["111-225-225"],
+      "warning": "Caller claims to be from Allied Bank, but this number is not an official ABL line. Allied Bank never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call ABL's official helpline 111-225-225 directly from your own phone."
+    },
+    {
+      "name": "Meezan Bank Limited",
+      "short_name": "Meezan",
+      "aliases": ["Meezan", "Meezan Bank", "MBL"],
+      "category": "bank",
+      "official_numbers": ["111-331-331"],
+      "warning": "Caller claims to be from Meezan Bank, but this number is not an official Meezan line. Meezan never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call Meezan's official helpline 111-331-331 directly from your own phone."
+    },
+    {
+      "name": "Bank Alfalah Limited",
+      "short_name": "Alfalah",
+      "aliases": ["Bank Alfalah", "Alfalah", "Alfalah Bank", "Al Falah Bank"],
+      "category": "bank",
+      "official_numbers": ["111-225-111"],
+      "warning": "Caller claims to be from Bank Alfalah, but this number is not an official Alfalah line. Bank Alfalah never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call Bank Alfalah's official helpline 111-225-111 directly from your own phone."
+    },
+    {
+      "name": "Askari Bank Limited",
+      "short_name": "Askari",
+      "aliases": ["Askari", "Askari Bank", "AKBL", "Askari Commercial Bank"],
+      "category": "bank",
+      "official_numbers": ["111-000-252"],
+      "warning": "Caller claims to be from Askari Bank, but this number is not an official Askari line. Askari Bank never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call Askari Bank's official helpline 111-000-252 directly from your own phone."
+    },
+    {
+      "name": "Faysal Bank Limited",
+      "short_name": "Faysal",
+      "aliases": ["Faysal Bank", "Faisal Bank", "FBL", "Faysal"],
+      "category": "bank",
+      "official_numbers": ["111-222-444"],
+      "warning": "Caller claims to be from Faysal Bank, but this number is not an official Faysal line. Faysal Bank never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call Faysal Bank's official helpline 111-222-444 directly from your own phone."
+    },
+    {
+      "name": "Standard Chartered Bank (Pakistan) Limited",
+      "short_name": "SCB",
+      "aliases": ["Standard Chartered", "Standard Chartered Pakistan", "SCB", "SC Pakistan"],
+      "category": "bank",
+      "official_numbers": ["111-000-222"],
+      "warning": "Caller claims to be from Standard Chartered, but this number is not an official SC Pakistan line. Standard Chartered never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call SC Pakistan's official helpline 111-000-222 directly from your own phone."
+    },
+    {
+      "name": "National Bank of Pakistan",
+      "short_name": "NBP",
+      "aliases": ["National Bank", "NBP Pakistan", "National Bank Pakistan"],
+      "category": "bank",
+      "official_numbers": ["111-627-627"],
+      "warning": "Caller claims to be from NBP, but this number is not an official NBP line. NBP never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call NBP's official helpline 111-627-627 directly from your own phone."
+    },
+    {
+      "name": "The Bank of Punjab",
+      "short_name": "BOP",
+      "aliases": ["Bank of Punjab", "BOP Bank", "Punjab Bank"],
+      "category": "bank",
+      "official_numbers": ["111-267-267"],
+      "warning": "Caller claims to be from the Bank of Punjab, but this number is not an official BOP line. BOP never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call BOP's official helpline 111-267-267 directly from your own phone."
+    },
+    {
+      "name": "Summit Bank Limited",
+      "short_name": "Summit",
+      "aliases": ["Summit Bank", "Summit Bank Pakistan"],
+      "category": "bank",
+      "official_numbers": ["111-124-444"],
+      "warning": "Caller claims to be from Summit Bank, but this number is not an official Summit line. Summit Bank never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call Summit Bank's official helpline 111-124-444 directly from your own phone."
+    },
+    {
+      "name": "SILK Bank Limited",
+      "short_name": "Silk",
+      "aliases": ["SILK Bank", "SilkBank", "Silk"],
+      "category": "bank",
+      "official_numbers": ["111-766-374"],
+      "warning": "Caller claims to be from SILK Bank, but this number is not an official SILK line. SILK Bank never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call SILK Bank's official helpline 111-766-374 directly from your own phone."
+    },
+    {
+      "name": "JS Bank Limited",
+      "short_name": "JS",
+      "aliases": ["JS Bank", "JSB", "JS"],
+      "category": "bank",
+      "official_numbers": ["111-124-444"],
+      "warning": "Caller claims to be from JS Bank, but this number is not an official JS Bank line. JS Bank never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call JS Bank's official helpline 111-124-444 directly from your own phone."
+    },
+    {
+      "name": "Soneri Bank Limited",
+      "short_name": "Soneri",
+      "aliases": ["Soneri Bank", "Soneri"],
+      "category": "bank",
+      "official_numbers": ["111-766-374"],
+      "warning": "Caller claims to be from Soneri Bank, but this number is not an official Soneri line. Soneri Bank never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call Soneri Bank's official helpline 111-766-374 directly from your own phone."
+    },
+    {
+      "name": "Sindh Bank Limited",
+      "short_name": "Sindh Bank",
+      "aliases": ["Sindh Bank", "SBL"],
+      "category": "bank",
+      "official_numbers": ["111-012-012"],
+      "warning": "Caller claims to be from Sindh Bank, but this number is not an official Sindh Bank line. Sindh Bank never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call Sindh Bank's official helpline 111-012-012 directly from your own phone."
+    },
+    {
+      "name": "Zarai Taraqiati Bank Limited",
+      "short_name": "ZTBL",
+      "aliases": ["ZTBL", "Zarai Taraqiati Bank", "Zarai Taraqqiati Bank", "Agricultural Development Bank of Pakistan"],
+      "category": "bank",
+      "official_numbers": ["051-920-4091"],
+      "warning": "Caller claims to be from ZTBL, but this number is not an official ZTBL line. ZTBL never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call ZTBL's official number 051-920-4091 directly from your own phone."
+    },
+    {
+      "name": "BankIslami Pakistan Limited",
+      "short_name": "BankIslami",
+      "aliases": ["BankIslami", "Bank Islami", "BIPL"],
+      "category": "bank",
+      "official_numbers": ["111-456-332"],
+      "warning": "Caller claims to be from BankIslami, but this number is not an official BankIslami line. BankIslami never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call BankIslami's official helpline 111-456-332 directly from your own phone."
+    },
+    {
+      "name": "Dubai Islamic Bank Pakistan Limited",
+      "short_name": "DIB",
+      "aliases": ["Dubai Islamic Bank", "DIB", "DIB Pakistan", "DIBPL"],
+      "category": "bank",
+      "official_numbers": ["111-022-022"],
+      "warning": "Caller claims to be from Dubai Islamic Bank, but this number is not an official DIB Pakistan line. DIB never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call DIB Pakistan's official helpline 111-022-022 directly from your own phone."
+    },
+    {
+      "name": "Al Baraka Bank (Pakistan) Limited",
+      "short_name": "Al Baraka",
+      "aliases": ["Al Baraka Bank", "Albaraka", "Al Baraka", "ABPL"],
+      "category": "bank",
+      "official_numbers": ["111-222-225"],
+      "warning": "Caller claims to be from Al Baraka Bank, but this number is not an official Al Baraka line. Al Baraka never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call Al Baraka's official helpline 111-222-225 directly from your own phone."
+    },
+    {
+      "name": "Habib Metropolitan Bank Limited",
+      "short_name": "HabibMetro",
+      "aliases": ["HabibMetro", "Habib Metro", "Habib Metropolitan Bank", "HMB"],
+      "category": "bank",
+      "official_numbers": ["111-111-425"],
+      "warning": "Caller claims to be from HabibMetro, but this number is not an official HabibMetro line. HabibMetro never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call the official helpline 111-111-425 directly from your own phone. Do not confuse with the fictional 'Metro Commercial Bank' used in demos."
+    },
+    {
+      "name": "Samba Bank Limited",
+      "short_name": "SAMBA",
+      "aliases": ["Samba Bank", "Samba", "Samba Pakistan"],
+      "category": "bank",
+      "official_numbers": ["111-726-222"],
+      "warning": "Caller claims to be from Samba Bank, but this number is not an official Samba line. Samba Bank never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call Samba Bank's official helpline 111-726-222 directly from your own phone."
+    },
+    {
+      "name": "MCB Islamic Bank Limited",
+      "short_name": "MCB Islamic",
+      "aliases": ["MCB Islamic Bank", "MCB-Islami"],
+      "category": "bank",
+      "official_numbers": ["111-000-622"],
+      "warning": "Caller claims to be from MCB Islamic, but this number is not an official MCB Islamic line. MCB Islamic never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call the official helpline 111-000-622 directly from your own phone."
+    },
+    {
+      "name": "Punjab Provincial Cooperative Bank Limited",
+      "short_name": "PPCB",
+      "aliases": ["Punjab Cooperative Bank", "PPCB Bank", "Punjab Provincial Co-operative Bank"],
+      "category": "bank",
+      "official_numbers": ["042-992-11201"],
+      "warning": "Caller claims to be from the Punjab Provincial Cooperative Bank, but this number is not an official PPCB line. PPCB never asks for OTPs, PINs, passwords, CVVs or full account/card details over a call and never asks you to transfer money to a 'safe account'. Hang up and call PPCB's official number 042-992-11201 directly from your own phone."
+    },
+    {
+      "name": "Easypaisa (Telenor Microfinance Bank)",
+      "short_name": "Easypaisa",
+      "aliases": ["Easy Paisa", "EasyPaisa", "Telenor Microfinance Bank", "TMB"],
+      "category": "wallet",
+      "official_numbers": ["3737"],
+      "warning": "Caller claims to be from Easypaisa, but this number is not an official Easypaisa channel. Easypaisa never asks for your MPIN, OTP, or account/CNIC details over a call and never asks you to send money to 'verify' or 'unblock' your account. Hang up and dial 3737 yourself from your registered mobile number."
+    },
+    {
+      "name": "JazzCash (Mobilink Microfinance Bank)",
+      "short_name": "JazzCash",
+      "aliases": ["Jazz Cash", "Jazzcash", "MobiCash", "Mobilink Microfinance Bank", "MMBL"],
+      "category": "wallet",
+      "official_numbers": ["4444", "8558"],
+      "warning": "Caller claims to be from JazzCash, but this number is not an official JazzCash channel. JazzCash never asks for your MPIN, OTP, or account/CNIC details over a call and never asks you to send money to 'verify' or 'unblock' your account. Hang up and dial 4444 (or 8558) yourself from your registered mobile number."
+    },
+    {
+      "name": "UPaisa (Ufone)",
+      "short_name": "UPaisa",
+      "aliases": ["U Paisa", "Upaisa", "Ufone Microfinance Bank"],
+      "category": "wallet",
+      "official_numbers": ["786"],
+      "warning": "Caller claims to be from UPaisa, but this number is not an official UPaisa channel. UPaisa never asks for your MPIN, OTP, or account/CNIC details over a call and never asks you to send money to 'verify' or 'unblock' your account. Hang up and dial 786 from your Ufone number."
+    },
+    {
+      "name": "SadaPay",
+      "short_name": "SadaPay",
+      "aliases": ["Sada Pay", "SadaPay Pakistan", "Sada"],
+      "category": "wallet",
+      "official_numbers": ["051-111-000-723"],
+      "warning": "Caller claims to be from SadaPay, but this number is not an official SadaPay channel. SadaPay never asks for your PIN, OTP, or account/CNIC details over a call and never asks you to send money to 'verify' your account. Hang up and call SadaPay's official helpline 051-111-000-723 directly from your own phone."
+    },
+    {
+      "name": "NayaPay",
+      "short_name": "NayaPay",
+      "aliases": ["Naya Pay", "NayaPay Pakistan", "Naya"],
+      "category": "wallet",
+      "official_numbers": ["021-111-629-269"],
+      "warning": "Caller claims to be from NayaPay, but this number is not an official NayaPay channel. NayaPay never asks for your PIN, OTP, or account/CNIC details over a call and never asks you to send money to 'verify' your account. Hang up and call NayaPay's official helpline 021-111-629-269 directly from your own phone."
+    },
+    {
+      "name": "Jazz (Pakistan Mobile Communications Limited)",
+      "short_name": "Jazz",
+      "aliases": ["Jazz Pakistan", "Mobilink", "PMCL"],
+      "category": "telco",
+      "official_numbers": ["111-123-456", "555"],
+      "warning": "Caller claims to be from Jazz, but this number is not an official Jazz number. Jazz never asks for your SIM verification code, OTP, CNIC or payments to a personal/mobile account, and genuine prizes or offers never require an upfront 'processing fee'. Verify by dialing 555 from your Jazz SIM or 111-123-456 from any phone."
+    },
+    {
+      "name": "Telenor Pakistan",
+      "short_name": "Telenor",
+      "aliases": ["Telenor Pakistan", "Telenor 4G", "TP"],
+      "category": "telco",
+      "official_numbers": ["345"],
+      "warning": "Caller claims to be from Telenor, but this number is not an official Telenor number. Telenor never asks for your SIM verification code, OTP, CNIC or payments to a personal/mobile account, and genuine prizes or offers never require an upfront 'processing fee'. Verify by dialing 345 from your Telenor SIM."
+    },
+    {
+      "name": "Zong 4G (CMPak Limited)",
+      "short_name": "Zong",
+      "aliases": ["Zong 4G", "CMPak", "China Mobile Pakistan"],
+      "category": "telco",
+      "official_numbers": ["310"],
+      "warning": "Caller claims to be from Zong, but this number is not an official Zong number. Zong never asks for your SIM verification code, OTP, CNIC or payments to a personal/mobile account, and genuine prizes or offers never require an upfront 'processing fee'. Verify by dialing 310 from your Zong SIM."
+    },
+    {
+      "name": "Ufone 4G (Pakistan Telecommunication Mobile Limited)",
+      "short_name": "Ufone",
+      "aliases": ["Ufone Pakistan", "Ufone 4G", "PTML"],
+      "category": "telco",
+      "official_numbers": ["333", "123"],
+      "warning": "Caller claims to be from Ufone, but this number is not an official Ufone number. Ufone never asks for your SIM verification code, OTP, CNIC or payments to a personal/mobile account, and genuine prizes or offers never require an upfront 'processing fee'. Verify by dialing 333 (or 123) from your Ufone SIM."
+    },
+    {
+      "name": "Pakistan Telecommunication Company Limited",
+      "short_name": "PTCL",
+      "aliases": ["PTCL Pakistan", "Pakistan Telecommunication"],
+      "category": "telco",
+      "official_numbers": ["1218"],
+      "warning": "Caller claims to be from PTCL, but this number is not an official PTCL number. PTCL never asks for your account PIN, OTP or payments to a personal/mobile account over a call, and never threatens instant disconnection to extract immediate payment. Verify by dialing 1218 from your own phone."
+    },
+    {
+      "name": "Federal Board of Revenue",
+      "short_name": "FBR",
+      "aliases": ["FBR Pakistan", "Federal Board of Revenue", "Tax Department", "Inland Revenue"],
+      "category": "government",
+      "official_numbers": ["051-111-772-772"],
+      "warning": "Caller claims to be from the FBR, but this number is not an official FBR line. The FBR never demands tax payments, fines or refunds over the phone, never asks you to buy vouchers or transfer money to personal accounts, and never threatens immediate arrest. Real FBR notices arrive in writing; verify by calling 051-111-772-772."
+    },
+    {
+      "name": "National Database and Registration Authority",
+      "short_name": "NADRA",
+      "aliases": ["NADRA Pakistan", "National Database Registration Authority", "Pak-ID"],
+      "category": "government",
+      "official_numbers": ["051-111-786-111"],
+      "warning": "Caller claims to be from NADRA, but this number is not an official NADRA line. NADRA never asks for your CNIC details, family tree data, or verification codes over a call and never demands payment to 'unblock' your identity record. Verify at a NADRA Registration Center or by calling 051-111-786-111."
+    },
+    {
+      "name": "Securities and Exchange Commission of Pakistan",
+      "short_name": "SECP",
+      "aliases": ["SECP Pakistan", "Securities and Exchange Commission"],
+      "category": "government",
+      "official_numbers": ["051-920-7080"],
+      "warning": "Caller claims to be from the SECP, but this number is not an official SECP line. The SECP never demands on-the-spot penalties, 'company registration' fees or investor payments over the phone. Verify any notice in writing by calling 051-920-7080."
+    },
+    {
+      "name": "State Bank of Pakistan",
+      "short_name": "SBP",
+      "aliases": ["State Bank", "State Bank of Pakistan", "Central Bank of Pakistan"],
+      "category": "government",
+      "official_numbers": ["021-992-1151"],
+      "warning": "Caller claims to be from the State Bank of Pakistan, but this number is not an official SBP line. SBP never calls citizens about their personal bank accounts, never asks for OTPs or PINs, and never instructs fund transfers - SBP regulates banks and does not deal with individual accounts. Verify your bank's own helpline using this directory."
+    },
+    {
+      "name": "Pakistan Telecommunication Authority",
+      "short_name": "PTA",
+      "aliases": ["PTA Pakistan", "Pakistan Telecom Authority"],
+      "category": "government",
+      "official_numbers": ["051-960-7000"],
+      "warning": "Caller claims to be from the PTA, but this number is not an official PTA line. PTA never calls to 'verify' your SIM, never threatens immediate SIM blocking, and never asks for CNIC or OTP details over the phone. Verify by calling 051-960-7000."
+    },
+    {
+      "name": "K-Electric Limited",
+      "short_name": "K-Electric",
+      "aliases": ["K Electric", "Karachi Electric", "KESC", "Karachi Electricity Supply Company"],
+      "category": "utility",
+      "official_numbers": ["111-000-118"],
+      "warning": "Caller claims to be from K-Electric, but this number is not an official KE line. K-Electric never demands immediate payment over the phone to stop disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 111-000-118."
+    },
+    {
+      "name": "Islamabad Electric Supply Company",
+      "short_name": "IESCO",
+      "aliases": ["Islamabad Electric Supply Company", "IESCO Pakistan"],
+      "category": "utility",
+      "official_numbers": ["111-333-444"],
+      "warning": "Caller claims to be from IESCO, but this number is not an official IESCO line. IESCO never demands immediate payment over the phone to stop disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 111-333-444."
+    },
+    {
+      "name": "Lahore Electric Supply Company",
+      "short_name": "LESCO",
+      "aliases": ["Lahore Electric Supply Company", "LESCO Pakistan"],
+      "category": "utility",
+      "official_numbers": ["042-990-3333"],
+      "warning": "Caller claims to be from LESCO, but this number is not an official LESCO line. LESCO never demands immediate payment over the phone to stop disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 042-990-3333."
+    },
+    {
+      "name": "Faisalabad Electric Supply Company",
+      "short_name": "FESCO",
+      "aliases": ["Faisalabad Electric Supply Company", "FESCO Pakistan"],
+      "category": "utility",
+      "official_numbers": ["041-933-0111"],
+      "warning": "Caller claims to be from FESCO, but this number is not an official FESCO line. FESCO never demands immediate payment over the phone to stop disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 041-933-0111."
+    },
+    {
+      "name": "Gujranwala Electric Power Company",
+      "short_name": "GEPCO",
+      "aliases": ["Gujranwala Electric Power Company", "GEPCO Pakistan"],
+      "category": "utility",
+      "official_numbers": ["055-920-0420"],
+      "warning": "Caller claims to be from GEPCO, but this number is not an official GEPCO line. GEPCO never demands immediate payment over the phone to stop disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 055-920-0420."
+    },
+    {
+      "name": "Multan Electric Power Company",
+      "short_name": "MEPCO",
+      "aliases": ["Multan Electric Power Company", "MEPCO Pakistan", "MEPCO Multan"],
+      "category": "utility",
+      "official_numbers": ["061-933-0062"],
+      "warning": "Caller claims to be from MEPCO, but this number is not an official MEPCO line. MEPCO never demands immediate payment over the phone to stop disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 061-933-0062."
+    },
+    {
+      "name": "Peshawar Electric Supply Company",
+      "short_name": "PESCO",
+      "aliases": ["Peshawar Electric Supply Company", "PESCO Pakistan"],
+      "category": "utility",
+      "official_numbers": ["091-921-0423"],
+      "warning": "Caller claims to be from PESCO, but this number is not an official PESCO line. PESCO never demands immediate payment over the phone to stop disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 091-921-0423."
+    },
+    {
+      "name": "Quetta Electric Supply Company",
+      "short_name": "QESCO",
+      "aliases": ["Quetta Electric Supply Company", "QESCO Pakistan"],
+      "category": "utility",
+      "official_numbers": ["081-920-1426"],
+      "warning": "Caller claims to be from QESCO, but this number is not an official QESCO line. QESCO never demands immediate payment over the phone to stop disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 081-920-1426."
+    },
+    {
+      "name": "Hyderabad Electric Supply Company",
+      "short_name": "HESCO",
+      "aliases": ["Hyderabad Electric Supply Company", "HESCO Pakistan"],
+      "category": "utility",
+      "official_numbers": ["022-920-0358"],
+      "warning": "Caller claims to be from HESCO, but this number is not an official HESCO line. HESCO never demands immediate payment over the phone to stop disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 022-920-0358."
+    },
+    {
+      "name": "Tribal Electric Supply Company",
+      "short_name": "TESCO",
+      "aliases": ["Tribal Electric Supply Company", "TESCO Pakistan"],
+      "category": "utility",
+      "official_numbers": ["091-921-0424"],
+      "warning": "Caller claims to be from TESCO, but this number is not an official TESCO line. TESCO never demands immediate payment over the phone to stop disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 091-921-0424."
+    },
+    {
+      "name": "Sui Northern Gas Pipelines Limited",
+      "short_name": "SNGPL",
+      "aliases": ["Sui Northern Gas Pipelines Limited", "Sui Northern", "Sui Gas North"],
+      "category": "utility",
+      "official_numbers": ["111-000-333"],
+      "warning": "Caller claims to be from SNGPL, but this number is not an official SNGPL line. SNGPL never demands immediate payment over the phone to avoid gas disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 111-000-333."
+    },
+    {
+      "name": "Sui Southern Gas Company Limited",
+      "short_name": "SSGC",
+      "aliases": ["Sui Southern Gas Company", "Sui Southern", "SSGC Pakistan"],
+      "category": "utility",
+      "official_numbers": ["111-000-333"],
+      "warning": "Caller claims to be from SSGC, but this number is not an official SSGC line. SSGC never demands immediate payment over the phone to avoid gas disconnection and never asks you to pay a bill into a personal or mobile-wallet account. Check your bill via the official app or call 111-000-333."
+    },
+    {
+      "name": "TCS (Pvt) Limited",
+      "short_name": "TCS",
+      "aliases": ["TCS Courier", "Tranzum Courier Service", "TCS Pakistan"],
+      "category": "courier",
+      "official_numbers": ["111-123-456"],
+      "warning": "Caller claims to be from TCS, but this number is not an official TCS line. Courier riders may call from mobiles about a delivery you are expecting, but TCS never demands 'customs duty', 'processing' or 'parcel release' fees by phone before delivery and never asks you to pay into a personal or mobile-wallet account. Verify by calling 111-123-456."
+    },
+    {
+      "name": "Leopards Courier Services",
+      "short_name": "Leopards",
+      "aliases": ["Leopards Courier", "Leopards Courier Services", "LCS"],
+      "category": "courier",
+      "official_numbers": ["021-111-536-727"],
+      "warning": "Caller claims to be from Leopards, but this number is not an official Leopards line. Courier riders may call from mobiles about a delivery you are expecting, but Leopards never demands 'customs duty', 'processing' or 'parcel release' fees by phone before delivery and never asks you to pay into a personal or mobile-wallet account. Verify by calling 021-111-536-727."
+    },
+    {
+      "name": "M&P (Muller & Phipps Pakistan)",
+      "short_name": "M&P",
+      "aliases": ["Muller and Phipps", "Muller & Phipps", "M&P Courier", "MP Courier"],
+      "category": "courier",
+      "official_numbers": ["021-111-678-678"],
+      "warning": "Caller claims to be from M&P, but this number is not an official M&P line. Courier riders may call from mobiles about a delivery you are expecting, but M&P never demands 'customs duty', 'processing' or 'parcel release' fees by phone before delivery and never asks you to pay into a personal or mobile-wallet account. Verify by calling 021-111-678-678."
+    },
+    {
+      "name": "Trax Logistics",
+      "short_name": "Trax",
+      "aliases": ["Trax Courier", "Trax Logistics", "Trax Pakistan"],
+      "category": "courier",
+      "official_numbers": ["051-111-111-872"],
+      "warning": "Caller claims to be from Trax, but this number is not an official Trax line. Courier riders may call from mobiles about a delivery you are expecting, but Trax never demands 'customs duty', 'processing' or 'parcel release' fees by phone before delivery and never asks you to pay into a personal or mobile-wallet account. Verify by calling 051-111-111-872."
+    },
+    {
+      "name": "Call Courier (Pvt) Limited",
+      "short_name": "CallCourier",
+      "aliases": ["Call Courier", "CallCourier Pakistan", "CallCourier Services"],
+      "category": "courier",
+      "official_numbers": ["021-111-111-222"],
+      "warning": "Caller claims to be from Call Courier, but this number is not an official CallCourier line. Courier riders may call from mobiles about a delivery you are expecting, but Call Courier never demands 'customs duty', 'processing' or 'parcel release' fees by phone before delivery and never asks you to pay into a personal or mobile-wallet account. Verify by calling 021-111-111-222."
+    },
+    {
+      "name": "Microsoft Corporation",
+      "short_name": "Microsoft",
+      "aliases": ["Microsoft Support", "Microsoft Windows", "Windows Support", "Microsoft Security"],
+      "category": "tech",
+      "official_numbers": ["1-800-642-7676"],
+      "warning": "Caller claims to be from Microsoft Support, but Microsoft has no call-out support presence in Pakistan. Microsoft never makes unsolicited calls about viruses, refunds or your computer's security, and its only published support line is 1-800-642-7676 (US). Never install software, grant remote access, or read out codes at a caller's request. Hang up."
+    },
+    {
+      "name": "Google LLC",
+      "short_name": "Google",
+      "aliases": ["Google Support", "Google Security", "Gmail Support", "Google Account Team"],
+      "category": "tech",
+      "official_numbers": [],
+      "warning": "Caller claims to be from Google Support. Google operates no consumer support phone line and never makes unsolicited calls - any 'Google Support' caller is a scammer. Never share verification codes, grant account access, or pay 'account recovery' or 'business listing' fees. Hang up."
+    },
+    {
+      "name": "Apple Inc.",
+      "short_name": "Apple",
+      "aliases": ["Apple Support", "Apple ID", "iCloud Support", "Apple Pakistan"],
+      "category": "tech",
+      "official_numbers": ["0800-12345"],
+      "warning": "Caller claims to be from Apple Support, but this number is not an official Apple channel. Apple never calls unexpectedly to ask for your Apple ID password, two-factor verification codes, or payment details. Verify independently via apple.com/support or Apple's published Pakistan line 0800-12345."
+    }
+  ],
+
+  "fictional_banks": {
+    "note": "Fictional banks used ONLY in training data, demo scenarios and tests (privacy/legal rule: all demo material uses fictional banks - Build Bible Section 17). These entries must NEVER be used for real-world caller verification, and real organization names from 'organizations' must NEVER appear in training or demo material. The two sets are kept strictly separate.",
+    "usage": "training_demo_only",
+    "real_verification": false,
+    "banks": [
+      {
+        "name": "ApnaBank",
+        "short_name": "APNA",
+        "aliases": ["Apna Bank", "ApnaBank Limited", "National Apna Bank", "ApnaBank Pakistan"],
+        "category": "fictional_bank",
+        "official_short_code": "APNA-BNK",
+        "official_numbers": ["+92-21-111-APNA-00", "+92-21-111-2762-00"],
+        "training_only": true,
+        "warning": "ApnaBank is a fictional bank used only in TrustGuard AI demos and training data. It does not exist in reality: a real-world caller claiming to be from ApnaBank is a scammer or a system test. Never treat ApnaBank matches as real caller-ID verification and never include it in real-bank fraud statistics."
+      },
+      {
+        "name": "Metro Commercial Bank",
+        "short_name": "METRO-CB",
+        "aliases": ["Metro Commercial", "Metro Bank", "Metro Commercial Bank Limited"],
+        "category": "fictional_bank",
+        "official_short_code": "METRO-CB",
+        "official_numbers": ["+92-21-111-METRO-0", "+92-21-111-63876-0"],
+        "training_only": true,
+        "warning": "Metro Commercial Bank is a fictional bank used only in TrustGuard AI demos and training data. It does not exist in reality: a real-world caller claiming to be from Metro Commercial Bank is a scammer or a system test. Do not confuse with Habib Metropolitan Bank (HabibMetro), which is a real bank listed under organizations."
+      }
+    ]
+  },
+
+  "suspicious_patterns": [
+    {
+      "id": "pk_mobile_general",
+      "description": "Pakistani mobile number (+92-3XX-XXXXXXX / 03XX-XXXXXXX). Banks, wallets, government agencies and utilities never initiate official outbound customer calls from personal mobile numbers - the single strongest caller-ID red flag.",
+      "pattern": "^(?:\\+?92|0)3\\d{2}[-\\s]?\\d{7}$",
+      "match": "full",
+      "applies_to": ["bank", "wallet", "government", "utility"],
+      "severity": 4,
+      "taxonomy_label": null,
+      "note": "Map to the impersonation label of whatever category the caller claims (bank_impersonation, wallet_impersonation, government_impersonation, utility_impersonation). Caller-ID layer signal only - final score depends on what the caller asks for; a mobile claim plus any credential/payment request is the classic Pakistani vishing pattern. Courier and telco mobile calls are lower confidence (riders and some marketing legitimately use mobiles) - require an accompanying fee demand or credential request."
+    },
+    {
+      "id": "pk_mobile_jazz_series",
+      "description": "Jazz-owned mobile series (0300-0309 and 0320-0329). Attribution signal: a caller claiming to be Telenor, Zong or Ufone while calling from a Jazz-series number is a double mismatch.",
+      "pattern": "^(?:\\+?92|0)3[02]\\d[-\\s]?\\d{7}$",
+      "match": "full",
+      "applies_to": ["caller_id_attribution"],
+      "severity": 2,
+      "taxonomy_label": null,
+      "note": "Operator attribution only - do not score on the series alone; combine with the claimed organization."
+    },
+    {
+      "id": "pk_mobile_zong_series",
+      "description": "Zong-owned mobile series (0310-0319). Attribution signal for cross-checking a claimed telecom identity.",
+      "pattern": "^(?:\\+?92|0)31\\d[-\\s]?\\d{7}$",
+      "match": "full",
+      "applies_to": ["caller_id_attribution"],
+      "severity": 2,
+      "taxonomy_label": null,
+      "note": "Operator attribution only - combine with the claimed organization."
+    },
+    {
+      "id": "pk_mobile_ufone_series",
+      "description": "Ufone-owned mobile series (0330-0339). Attribution signal for cross-checking a claimed telecom identity.",
+      "pattern": "^(?:\\+?92|0)33\\d[-\\s]?\\d{7}$",
+      "match": "full",
+      "applies_to": ["caller_id_attribution"],
+      "severity": 2,
+      "taxonomy_label": null,
+      "note": "Operator attribution only - combine with the claimed organization."
+    },
+    {
+      "id": "pk_mobile_telenor_series",
+      "description": "Telenor-owned mobile series (0340-0359). Attribution signal for cross-checking a claimed telecom identity.",
+      "pattern": "^(?:\\+?92|0)3[45]\\d[-\\s]?\\d{7}$",
+      "match": "full",
+      "applies_to": ["caller_id_attribution"],
+      "severity": 2,
+      "taxonomy_label": null,
+      "note": "Operator attribution only - combine with the claimed organization."
+    },
+    {
+      "id": "international_non_pk_caller",
+      "description": "International (non-Pakistani) number. Pakistani banks, wallets, government agencies, utilities and couriers have no reason to call customers from foreign numbers.",
+      "pattern": "^\\+(?!92)\\d{6,15}$",
+      "match": "full",
+      "applies_to": ["bank", "wallet", "telco", "government", "utility", "courier", "tech"],
+      "severity": 4,
+      "taxonomy_label": null,
+      "note": "Common in refund and tech-support scams routed through foreign VoIP providers. Map to the impersonation label of the claimed category."
+    },
+    {
+      "id": "uan_format_displayed",
+      "description": "Caller ID displayed in the official UAN style (111-XXX-XXX or 0XX-111-XXX-XXX). The format alone does NOT prove legitimacy - UAN spoofing is trivial. Always require an independent callback to the directory number.",
+      "pattern": "^(?:0\\d{2,4}[-\\s]?)?111[-\\s]?\\d{3}[-\\s]?\\d{3}$",
+      "match": "full",
+      "applies_to": ["bank", "wallet", "telco", "government", "utility", "courier"],
+      "severity": 2,
+      "taxonomy_label": null,
+      "note": "If the displayed number exactly matches a directory official_number (normalized) it may count as platform_official_channel; if it merely looks like a UAN but is not listed for the claimed organization, treat it as spoofed and escalate."
+    },
+    {
+      "id": "landline_non_uan_claim",
+      "description": "Ordinary city landline (0XX-XXXXXXX / 0XX-XXXX-XXXX). Banks and large organizations publish UAN-style helplines; a random landline claiming to be a head-office or helpline callback is suspicious unless it exactly matches this directory.",
+      "pattern": "^0(?!3)[1-9]\\d{0,3}(?:[-\\s]?\\d){6,8}$",
+      "match": "full",
+      "applies_to": ["bank", "wallet", "government"],
+      "severity": 3,
+      "taxonomy_label": null,
+      "note": "Some directory entries legitimately list landlines (e.g., ZTBL 051-920-4091, PPCB 042-992-11201, SBP 021-992-1151) - always compare against official_numbers after normalization."
+    },
+    {
+      "id": "masked_or_hidden_caller_id",
+      "description": "Hidden, masked or garbage caller ID ('Unknown', 'Private', '***', 'XXXX'). Banks and government agencies do not hide their numbers.",
+      "pattern": "^(unknown|private|anonymous|restricted|no\\s?caller\\s?id|[\\-*x#]{3,})$",
+      "match": "full",
+      "flags": "i",
+      "applies_to": ["any_claim"],
+      "severity": 3,
+      "taxonomy_label": null,
+      "note": "Combine with any impersonation claim - hidden ID plus an authority claim is a classic scam pattern."
+    },
+    {
+      "id": "voice_call_from_shortcode",
+      "description": "3-5 digit number presented as a VOICE caller ID. Shortcodes (3737, 4444, 345, 1218, ...) are SMS-only channels; a voice call can never legitimately originate from a shortcode.",
+      "pattern": "^\\d{3,5}$",
+      "match": "full",
+      "applies_to": ["any_claim"],
+      "severity": 4,
+      "taxonomy_label": null,
+      "note": "Guaranteed spoofing. Surface the warning of whichever organization the caller claims."
+    },
+    {
+      "id": "repeated_digit_number",
+      "description": "A run of 8 or more identical digits in the caller ID (e.g., 0300-0000000) - typical of spoofing tools and fake numbers.",
+      "pattern": "(\\d)\\1{7,}",
+      "match": "search",
+      "applies_to": ["any_claim"],
+      "severity": 3,
+      "taxonomy_label": null,
+      "note": "No official number in this directory contains an 8-digit run; official numbers such as 051-111-111-425 (7-run) are deliberately not matched."
+    },
+    {
+      "id": "sequential_digit_number",
+      "description": "Sequential digit runs (1234567890, 0123456789, 9876543210) - fake or spoofed caller IDs.",
+      "pattern": "(?:0123456789|1234567890|9876543210)",
+      "match": "search",
+      "applies_to": ["any_claim"],
+      "severity": 2,
+      "taxonomy_label": null,
+      "note": "Low severity alone; combine with a claimed organization or credential request."
+    },
+    {
+      "id": "malformed_pk_number",
+      "description": "+92 number with a wrong digit count - malformed caller IDs generated by spoofing tools.",
+      "pattern": "^\\+92\\d{1,8}$|^\\+92\\d{11,}$",
+      "match": "full",
+      "applies_to": ["any_claim"],
+      "severity": 3,
+      "taxonomy_label": null,
+      "note": "Valid Pakistani numbers are +92 followed by 9-10 digits (mobile 3XXXXXXXXX; landline city code plus 7-8 digits)."
+    },
+    {
+      "id": "obfuscated_mobile_in_text",
+      "description": "Mobile number written with inserted separators, dots or spaced digits inside a message ('+ 9 2 3 0 0 ...', '03.00.1234567') - scammers obfuscate numbers to evade keyword filters and redirect victims to a callback mobile.",
+      "pattern": "(?<!\\d)(?:\\+?\\s*92|0)[\\s.\\-]*3[\\s.\\-]*\\d{2}[\\s.\\-]*\\d{3}[\\s.\\-]*\\d{4}(?!\\d)",
+      "match": "search",
+      "applies_to": ["message_text"],
+      "severity": 3,
+      "taxonomy_label": null,
+      "note": "Any message asking you to call a mobile number 'for the bank' or 'for support' is redirection - official channels never route callbacks to personal mobiles. Map to verification_avoidance or payment_redirection depending on context."
+    },
+    {
+      "id": "whatsapp_redirect_link",
+      "description": "WhatsApp deep-links (wa.me / api.whatsapp.com) to a raw phone number - scammers move victims off recorded official channels to WhatsApp.",
+      "pattern": "(?:wa\\.me/|api\\.whatsapp\\.com/send\\?phone=)\\+?\\d{7,15}",
+      "match": "search",
+      "applies_to": ["message_text"],
+      "severity": 3,
+      "taxonomy_label": "platform_migration",
+      "note": "platform_migration in the scoring taxonomy; escalate when combined with an impersonation claim or credential request."
+    },
+    {
+      "id": "spoofed_alphanumeric_sender",
+      "description": "Alphanumeric SMS sender ID carrying an organization name plus extra look-alike suffix characters (e.g., 'HBLVerify', 'JazzCash-Award', 'NADRA-Check'). Legitimate sender IDs never carry added suffixes; exact matches to well-known senders do not trigger this pattern.",
+      "pattern": "^(?:hbl|ubl|mcb|abl|akbl|askari|meezan|mbl|alfalah|alfl|faysal|faisal|fbl|scb|nbp|bop|summit|silk|jsbank|soneri|sindh|ztbl|bankislami|bipl|dib|albaraka|habibmetro|hmb|samba|ppcb|easypaisa|jazzcash|upaisa|sadapay|nayapay|jazz|telenor|ufone|zong|ptcl|fbr|nadra|secp|sbp|pta|kelectric|iesco|lesco|fesco|gepco|mepco|pesco|qesco|hesco|tesco|sngpl|ssgc|tcs|leopards|lcs|trax|callcourier)[a-z0-9_\\-]{1,12}$",
+      "match": "full",
+      "flags": "i",
+      "applies_to": ["sms_sender_id"],
+      "severity": 3,
+      "taxonomy_label": null,
+      "note": "Apply to the SMS sender ID field only. Fire as high-confidence ONLY when combined with a credential request, fee demand or link in the message body; a spoofed sender ID plus an OTP request is otp_harvesting + bank_impersonation. Bare exact sender tokens (e.g., 'HBL') do not match this pattern and require corroboration."
+    }
+  ]
+}

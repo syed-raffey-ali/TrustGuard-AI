@@ -1,0 +1,46 @@
+{
+  "id": "gs_026",
+  "label": "scam",
+  "expected_band": "medium",
+  "family": "authority_claim",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Main Anti Corruption Officer Shahid bol raha hoon, badge number AC-2291."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Aap ke ilaqay ke contractor par case hai aur aap gawah hain, official record mein naam aap ka aya hai."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "me",
+      "timestamp_offset_s": 25,
+      "text": "Gawah? Maine kuch dekha hi nahi."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 60,
+      "text": "Record correction ke liye verification officer ID card number bhejo apna, case file update karne hai."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 78,
+      "text": "ID number sensitive hota hai main khud office aa kar de deta hoon."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 122,
+      "text": "Office aane ka time nahi hai. Turant photo bhejo warna summon nikal jaye ga, criminal case ban jaye ga."
+    }
+  ]
+}

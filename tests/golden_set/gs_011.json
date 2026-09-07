@@ -1,0 +1,40 @@
+{
+  "id": "gs_011",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "wallet_impersonation",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "JazzCash fraud team here. Someone tried to empty your wallet from Lahore."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Ya Allah! Mera to balance hi nahi tha zyada."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Wallet freeze karne ke liye hum ne aap ko OTP bheja hai, read it back to me."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 48,
+      "text": "OTP aa gaya 88123."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 88,
+      "text": "Shukriya madam. Aur apna 5-digit MPIN bhi de dein taake security set kar sakein permanently."
+    }
+  ]
+}

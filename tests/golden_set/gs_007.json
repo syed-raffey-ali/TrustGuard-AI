@@ -1,0 +1,40 @@
+{
+  "id": "gs_007",
+  "label": "scam",
+  "expected_band": "medium",
+  "family": "government_impersonation",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Police cybercrime cell. Ek complaint aap ke number se offensive content post karne par aayi hai."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Maine kuch post nahi kiya, mera phone hack ho sakta hai!"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 35,
+      "text": "Charges hatane ke liye verification officer se milna hoga. Pehle 15,000 ka processing fee bhejo JazzCash par."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 55,
+      "text": "Mujhe station aa kar milna chahta hoon."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 105,
+      "text": "Station aaoge to seedha remand mein jao ge. Abhi turant fee bhejo aur case khatam karo."
+    }
+  ]
+}

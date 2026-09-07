@@ -1,0 +1,58 @@
+version: "3.9"
+
+# TrustGuard AI — Bible Section 18. `docker compose up` brings up the full
+# server side; the Android app and dashboard run from their own toolchains.
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: trustguard
+      POSTGRES_PASSWORD: trustguard
+      POSTGRES_DB: trustguard
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U trustguard"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  gateway:
+    build:
+      context: .
+      dockerfile: services/realtime-gateway/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+asyncpg://trustguard:trustguard@db:5432/trustguard
+      REDIS_URL: redis://redis:6379/0
+      LOCAL_MODEL_ENDPOINT: ${LOCAL_MODEL_ENDPOINT:-http://host.docker.internal:11434}
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  demo-bank:
+    build:
+      context: .
+      dockerfile: services/demo-bank/Dockerfile
+    ports:
+      - "8002:8002"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:

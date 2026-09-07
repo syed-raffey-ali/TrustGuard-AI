@@ -1,0 +1,34 @@
+{
+  "id": "gs_042",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "exam_prep",
+  "language": "urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "کل کے ٹیسٹ کی تیاری ہو گئی؟ فزکس کا چیپٹر پانچ بہت مشکل لگ رہا ہے۔"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "ہاں وہ تو ہے، لیکن سولو دیکھ لیا ہے۔ کل صبح مل کر ریویژن کرتے ہیں۔"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 35,
+      "text": "بہتر ہو گا۔ لائبریری آٹھ بجے مل جائیں؟"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 65,
+      "text": "ٹھیک ہے، اپنا نیوٹس شیئر کرنا بھولنا نہیں۔"
+    }
+  ]
+}

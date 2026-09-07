@@ -1,0 +1,52 @@
+{
+  "id": "gs_030",
+  "label": "scam",
+  "expected_band": "critical",
+  "family": "accidental_transfer",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Allah ka shukar! Bhai aap ne meri madad kar di, main ne galti se aap ke number par 40,000 bheje the aur aap ne lot diya 🙏"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Haan yaar 40 hazar aye the, main hairan tha kis ke paise hain."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Woh meri beti ki fees ke thay. Bhai ek urgent kaam — main ne aap ke number par 80,000 ghalati se bhej diye the kal raat."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 48,
+      "text": "Nahi bhai, sirf 40 hazar aaye thay mere paas."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 83,
+      "text": "Bank balance check karo! System ka masla hai, dono transactions ek sath gaye. Jo extra 40,000 hai woh wapas bhej do is IBAN par: PK36XXXX000034567890."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "me",
+      "timestamp_offset_s": 98,
+      "text": "Ek minute check karta hoon..."
+    },
+    {
+      "message_id": "m_7",
+      "speaker": "them",
+      "timestamp_offset_s": 148,
+      "text": "Foran bhai, bank branch 4 baje band ho jaye gi aur mera loan clear hona hai aaj hi. Meri izzat daav par hai."
+    }
+  ]
+}

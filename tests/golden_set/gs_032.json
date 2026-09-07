@@ -1,0 +1,40 @@
+{
+  "id": "gs_032",
+  "label": "scam",
+  "expected_band": "medium",
+  "family": "olx_advance",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Hi! I want to buy your iPhone listed on OLX. I'm out of country but my agent will pick it up."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Sure, payment method? Cash on pickup preferred."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 35,
+      "text": "I'll pay online through OLX wallet protection. Just buy a 4,000 PKR Google Play card and share the code as your identity verification."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 55,
+      "text": "That sounds odd, why would identity need a Play card?"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 100,
+      "text": "It unlocks your seller wallet, standard process now. Do it fast, another buyer is also interested."
+    }
+  ]
+}

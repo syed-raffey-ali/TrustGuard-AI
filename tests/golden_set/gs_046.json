@@ -1,0 +1,34 @@
+{
+  "id": "gs_046",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "bill_payment_receipt",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Abbu bijli ka bill jama kar diya main ne online, receipt email par bhej di hai."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Shukriya beta. Kitna bana is baar?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "me",
+      "timestamp_offset_s": 35,
+      "text": "8,200 — AC chalane ki wajah se zyada aa gaya 😅"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 60,
+      "text": "Koi baat nahi, garmi hai. Agla month kam ho jaye ga."
+    }
+  ]
+}

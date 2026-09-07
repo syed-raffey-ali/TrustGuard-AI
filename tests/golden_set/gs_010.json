@@ -1,0 +1,52 @@
+{
+  "id": "gs_010",
+  "label": "scam",
+  "expected_band": "critical",
+  "family": "wallet_impersonation",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Hello! Main Easypaisa ka authorized agent hoon, aap ne hamara survey fill kiya tha."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Aap 25,000 rupay ka lucky draw jeet gaye hain! 🎉"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "me",
+      "timestamp_offset_s": 30,
+      "text": "Sach mein?! Kaise milenge paisay?"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 65,
+      "text": "Pehle 2,500 ka tax token jama karo phir prize release hota hai turant."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 80,
+      "text": "Ye raasta number hai, is Easypaisa merchant account par bhej dein: 0341-XXXXX90."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "me",
+      "timestamp_offset_s": 92,
+      "text": "Theek hai, bhej deta hoon abhi."
+    },
+    {
+      "message_id": "m_7",
+      "speaker": "them",
+      "timestamp_offset_s": 137,
+      "text": "Jaldi karo, offer aaj hi expire hota hai. Kisi ko na batana warna prize cancel."
+    }
+  ]
+}

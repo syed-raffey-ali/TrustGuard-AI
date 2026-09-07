@@ -1,0 +1,46 @@
+{
+  "id": "gs_031",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "olx_advance",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Assalam o Alaikum, aap ki OLX listing dekhi Honda 125 ki. Paise tayyar hain full price par."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Ji 145,000 final hai, bike Lahore mein hai."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Main Islamabad se hoon, army mein hoon posting mein nahi aa sakta. Bike ship kara dein, main pehle advance de deta hoon."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 50,
+      "text": "Sirf 5,000 booking fee hai jo OLX ke shipping partner ko deni hai, ye Easypaisa number: 0322-XXXXX88."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 66,
+      "text": "OLX mein shipping service hoti hai? Mujhe to pata hi nahi."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 111,
+      "text": "Naya service launch hua hai. Fee bhejte hi main full payment transfer kar deta hoon aaj hi, deal confirm karo turant."
+    }
+  ]
+}

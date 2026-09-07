@@ -1,0 +1,40 @@
+{
+  "id": "gs_019",
+  "label": "scam",
+  "expected_band": "medium",
+  "family": "utility_impersonation",
+  "language": "urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "سوئی گیس ڈیپارٹمنٹ سے بول رہے ہیں۔ کل آپ کا میٹر چیکنگ کے لیے کھولا جائے گا، فیس دو ہزار روپے ہے۔"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "چیکنگ کی فیس؟ پہلے کبھی نہیں تھی۔"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 35,
+      "text": "نیا قاعدہ ہے۔ فوراً ایجنٹ نمبر پر بھیج دیں ورنہ سپلائی کاٹ دی جائے گی۔"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 53,
+      "text": "میں آفس جانا چاہتا ہوں۔"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 98,
+      "text": "آفس والے نہیں ملیں گے۔ آج ہی فیس بھیجو، خبردار وقت پر نہ بھیجی تو نقصان آپ کا ہو گا۔"
+    }
+  ]
+}

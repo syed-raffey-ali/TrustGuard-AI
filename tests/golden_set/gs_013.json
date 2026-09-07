@@ -1,0 +1,46 @@
+{
+  "id": "gs_013",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "family_impersonation",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Assalam o Alaikum Abu ji, main Bilal bol raha hoon aap ka beta."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Beta kahan se call kar rahe ho? Awaz change lag rahi hai."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Mere paas naya number hai purana kho gaya. Abu main Dubai airport phansa hoon, visa issue hai."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 48,
+      "text": "Mujhe 80,000 rupay urgent bhejne hain agent ko, warna jail ho jaye gi. Please kisi ko na batana, ammi ko mat batana."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 63,
+      "text": "Allah ke kasam sach keh rahe ho beta?"
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 113,
+      "text": "Abu main sach mein phansa hoon, foran bhejo is number par. Baad mein sab samjhata hoon."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "gs_024",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "courier_impersonation",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "TCS parcel service se call hai. Aap ka naam par London se parcel aaya hai jis mein currency hai."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Parcel? Maine kuch order nahi kiya."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Customs ne rok rakha hai. Release ke liye 6,200 customs duty foran jama karni hai."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 48,
+      "text": "Ye agent number hai Easypaisa par: 0333-XXXXX12, reference parcel LC-8891 likh dein."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 62,
+      "text": "Duty office se payment hoti thi na pehle?"
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 108,
+      "text": "Naya online system hai. 2 ghante ke andar fee na hui to parcel customs custody mein chale ga aur fine lage ga."
+    }
+  ]
+}

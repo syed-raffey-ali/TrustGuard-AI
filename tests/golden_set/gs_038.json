@@ -1,0 +1,40 @@
+{
+  "id": "gs_038",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "olx_legit_sale",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Bhai salam, OLX par mobile dekha tha. 22 hazar final karein ge?"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Salam! 24 hazar hai bhai, box pack bilkul new condition."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Chalen 23 kar do, cash on delivery type mil kar le loon Hafeez Centre se."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 58,
+      "text": "Theek hai 23 par deal. Kal shaam 6 baje mil jate hain, receipt likh dein ge sath."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 83,
+      "text": "Perfect bhai, kal milte hain. JazakAllah."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "gs_045",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "wedding_shopping",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Api! Bhabhi ki shaadi ke liye kapray dekhne jana hai kal Tariq Road."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Haan yaar! Kab se plan kar rahe hain. Chalo 4 baje nikalte hain."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 28,
+      "text": "Pehle lunch karein ge? Wo naya cafe khula hai Khadda Market mein."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 50,
+      "text": "Done deal. Budget yaad rakhna, sale chal rahi hai wahan."
+    }
+  ]
+}

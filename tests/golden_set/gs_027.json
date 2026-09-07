@@ -1,0 +1,64 @@
+{
+  "id": "gs_027",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "romance",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Sorry galat number lag gaya tha, but aap ka intro dekh kar dil khush ho gaya 😊 Main Ahmed, Dubai mein kaam karta hoon."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Haha koi baat nahi. Main Sana."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 45,
+      "text": "Sana ji subah subah aap ki yaad aa gayi. Aaj din bohot acha ja raha hai alhamdulillah."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 28845,
+      "text": "Aap to bohot sweet ho Ahmed 😄"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 28965,
+      "text": "Sach kahoon, itne kam dinon mein kisi ko itna close mehsoos nahi kiya. Yeh baat sirf tum se share kar raha hoon, kisi ko na batana."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 29055,
+      "text": "Aur suno, mere trading group mein gold signals se paisa double hota hai. Mere cousin ki car double ho gayi 2 mahine mein! Guaranteed profit hai risk zero."
+    },
+    {
+      "message_id": "m_7",
+      "speaker": "me",
+      "timestamp_offset_s": 29125,
+      "text": "Double?? Thora risky lagta hai sach mein."
+    },
+    {
+      "message_id": "m_8",
+      "speaker": "them",
+      "timestamp_offset_s": 29225,
+      "text": "Bilkul nahi! Screenshots dekh lo mere profits ke. Entry aaj last day hai, 50,000 is Easypaisa manager account par: 0345-XXXXX77."
+    },
+    {
+      "message_id": "m_9",
+      "speaker": "them",
+      "timestamp_offset_s": 29280,
+      "text": "Sirf 10 minute ke andar bhejo to VIP slot dilwa doonga. Time nahi hai jaan!"
+    }
+  ]
+}

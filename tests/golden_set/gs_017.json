@@ -1,0 +1,40 @@
+{
+  "id": "gs_017",
+  "label": "scam",
+  "expected_band": "medium",
+  "family": "telecom_impersonation",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Congratulations! Aap Telenor ke customer loyalty draw mein jeet gaye hain — 100,000 rupay!"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Yaar phir se lottery scam?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 35,
+      "text": "Nahi madam yeh official hai. Sirf 1,500 ka SIM verification fee hai, balance aap ke account mein aayega."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 50,
+      "text": "Fee maaf kar do phir manon gi."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 100,
+      "text": "Fee ke baghair process nahi hota. Aaj raat 12 baje tak bhejo warna next winner ko chala jaye ga."
+    }
+  ]
+}

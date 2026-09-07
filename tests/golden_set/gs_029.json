@@ -1,0 +1,46 @@
+{
+  "id": "gs_029",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "romance",
+  "language": "english",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "My love, emergency!! I was detained at Karachi airport, they say my visa papers are fake."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "WHAT?! Are you okay?? Call me right now!"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 25,
+      "text": "They took my phone at the counter, using an officer's phone only. I need 65,000 for immediate legal clearance or they move me to jail tonight."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 45,
+      "text": "Send it by Western Union on my agent Mr. Tariq's name, this number: 0321-XXXXX09. Time nahi hai baby please."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 60,
+      "text": "Sending right now! Don't worry, we'll sort this out."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 95,
+      "text": "And baby please don't tell anyone, especially not your brother. If officials hear about outside calls it gets worse for me."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "gs_034",
+  "label": "scam",
+  "expected_band": "medium",
+  "family": "prize_lottery_claim",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "EASY PAISA LUCKY DRAW 🎉 Aap ka number winner nikla hai 500,000 rupay ka! Reference EP-WIN-2026."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Maine to kabhi draw mein participate hi nahi kiya."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Automatic entry hoti hai sab customers ki. Claim karne ke liye 4,999 processing fee chahiye sirf."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 48,
+      "text": "Fee JazzCash par bhejein is merchant code par, prize same day release ho jata hai."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 63,
+      "text": "Prize ke liye fee? Ye to scam lagta hai."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 105,
+      "text": "Madam ye govt tax hai sirf naam ka. Aaj raat 12 baje tak claim na hui to prize next draw mein chala jaye ga."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "gs_009",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "bank_impersonation",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Metro Commercial Bank ki taraf se salam. Aap ke dormant account ka refund 95,000 rupay clear ho gaya hai."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Refund? Kaunsa account bhai?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Purana salary account jo 2019 se band hai. Refund chahiye to apna active IBAN/account number confirm kar dein."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 48,
+      "text": "Aur mobile banking PIN bhi update kar dein taake transfer turant ho jaye."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 63,
+      "text": "PIN bhi dena zaroori hai?"
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 103,
+      "text": "Ji system requirement hai. Jaldi karein refund queue kal tak expire ho jati hai."
+    }
+  ]
+}

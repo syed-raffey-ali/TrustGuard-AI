@@ -1,0 +1,34 @@
+{
+  "id": "gs_047",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "cricket_planning",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Match fix ho gaya Sunday ko! Ground booking confirm hai 9 se 12."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Zabardast! Main ball aur stumps le aaunga."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 25,
+      "text": "Team list bhejta hoon, 11 ban gaye hain finally. Umair bowling opener kare ga."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 45,
+      "text": "Perfect, Sunday milte hain ground par!"
+    }
+  ]
+}

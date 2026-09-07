@@ -1,0 +1,40 @@
+{
+  "id": "gs_015",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "family_impersonation",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Aunty main Zoya ke office se bol rahi hoon. Zoya bohot bimar hai hospital mein admit hai."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Unhein foran operation karna hai, 150,000 deposit chahiye abhi."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "me",
+      "timestamp_offset_s": 28,
+      "text": "Allah! Kaun sa hospital hai beta?"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 68,
+      "text": "Private hospital hai. Western Union se bhej dein mere cousin ke naam par, pata yeh hai."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 83,
+      "text": "Please aunty Zoya ko phone mat karna woh unconscious hai, aur family ko mat batana sharam ki baat hai."
+    }
+  ]
+}

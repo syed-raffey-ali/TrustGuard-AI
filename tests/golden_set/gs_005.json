@@ -1,0 +1,46 @@
+{
+  "id": "gs_005",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "government_impersonation",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Yeh FBR tax office ka call hai. Aap ke naam par tax fraud ka case darj hua hai, case number TX-99213."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Fraud? Maine kabhi tax chhupaya nahi!"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 40,
+      "text": "Proof humare paas hai. Arrest warrant jari ho gaya hai, police kal subah aayegi."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 62,
+      "text": "Case khatam karne ke liye abhi 25,000 rupay fine jama karo is account number par: PK00XXXX000011223344."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 77,
+      "text": "Itni si baat? Theek hai bhejta hoon magar time milta hai?"
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 137,
+      "text": "Aaj hi within 2 hours, warna greftar ho gi. Kisi lawyer se baat na karna."
+    }
+  ]
+}

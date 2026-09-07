@@ -1,0 +1,21 @@
+{
+  "id": "scenario_c",
+  "name": "Romance / investment grooming (multi-day, replayed at demo speed)",
+  "channel": "chat",
+  "expected_band": "high",
+  "notes": "Slow-burn shape: rapid intimacy -> secrecy -> investment pitch -> payment redirection. Score climbs gradually — timeline must show stage progression, not a single keyword.",
+  "messages": [
+    {"speaker": "them", "pause_ms": 1500, "text": "Salam! Wrong number lagta hai, lekin aap se baat hoke acha laga. Main Ahmed, Dubai mein kaam karta hoon."},
+    {"speaker": "me", "pause_ms": 1200, "text": "Salam. Koi baat nahi. Main Sana, Karachi se."},
+    {"speaker": "them", "pause_ms": 1000, "text": "Sana ji, aap ki profile dekh kar laga aap bohot different hain. Subah gym jate ho? Main bhi daily 5am uthta hoon."},
+    {"speaker": "them", "pause_ms": 900, "text": "Aaj office mein meeting thi, aap yaad aa rahi thi. Pata nahi kyun 😊"},
+    {"speaker": "me", "pause_ms": 1100, "text": "Haha, aap bohot funny ho Ahmed."},
+    {"speaker": "them", "pause_ms": 1200, "text": "Sach kahoon? Aap se zyada close kisi ko mehsoos nahi kiya itne dinon mein. Yeh baat sirf tum se share kar raha hoon, kisi ko na batana."},
+    {"speaker": "them", "pause_ms": 1300, "text": "Main ne ek trading group join kiya hai — gold signals. Mere cousin ne 2 mahine mein apni car ke paisay double kar liye. Guaranteed returns hain, risk zero."},
+    {"speaker": "me", "pause_ms": 1400, "text": "Double? Yeh to risky lagta hai..."},
+    {"speaker": "them", "pause_ms": 1000, "text": "Bilkul nahi! Dekho screenshot bhejta hoon, mere account mein profit dikh raha hai. Sirf aap ke liye bata raha hoon, warna group full ho jata."},
+    {"speaker": "them", "pause_ms": 1200, "text": "Aaj last day hai entry ka. Bas 50,000 rupay is Easypaisa agent account par bhej dein: 0345-XXXXXXX. Manager account number de raha hai kyunki direct band hai."},
+    {"speaker": "me", "pause_ms": 1500, "text": "Theek hai... kitna time lagega profit dikhne mein?"},
+    {"speaker": "them", "pause_ms": 1000, "text": "24 ghante! Aur agar aap abhi kisi ko na batayein aur turant bhejein, to main personal VIP slot dilwa doonga. Time nahi hai Sana, 10 minute ke andar bhejo."}
+  ]
+}

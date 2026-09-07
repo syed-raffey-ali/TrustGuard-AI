@@ -1,0 +1,40 @@
+{
+  "id": "gs_004",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "bank_impersonation",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "ApnaBank helpline yahan se. Sir aap ki card expiry update nahi hui, payments decline ho rahi hain."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Haan actually do baar decline hua tha kal."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Exactly! Card number confirm kar dein aur jo PIN use karte ho woh bhi batao, hum nayi chip activate kar dete hain."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 50,
+      "text": "PIN share karna zaroori hai?"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 105,
+      "text": "Bilkul, warna card permanent block ho jayega. Turant karo."
+    }
+  ]
+}

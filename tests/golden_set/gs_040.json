@@ -1,0 +1,34 @@
+{
+  "id": "gs_040",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "official_shortcode",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "[APNA-BNK] Dear customer, OTP 448120 for YOUR OWN login request at 14:32 on ApnaBank Internet Banking. Never share this code with anyone — you requested this transaction yourself."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Oh wait this is my own attempt, let me put it in quickly... done, logged in!"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 45,
+      "text": "(auto) Login successful from your registered device. If this was not you, call the number printed on your debit card immediately."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 105,
+      "text": "It was me, all good. Good to see they warn against sharing codes too."
+    }
+  ]
+}

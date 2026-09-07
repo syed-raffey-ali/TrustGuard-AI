@@ -1,0 +1,40 @@
+{
+  "id": "gs_036",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "benign_otp",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Hello ApnaBank support, main khud call kar raha hoon apne login issue ke liye. Ticket #55231."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Ji sir, aap ne jo password reset request ki hai us ke liye ek OTP generate hua hai."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "me",
+      "timestamp_offset_s": 30,
+      "text": "Haan wohi request ki thi mujhe. Code aa gaya hai 99213 — use this code to log in to your own account wala process batayein ab."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 55,
+      "text": "Sir code aap khud app mein enter karein, hum kabhi OTP nahi maangte. Bas confirm kar dein reset ho gaya?"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 75,
+      "text": "Ho gaya, login ho gaya. Shukriya, great service!"
+    }
+  ]
+}

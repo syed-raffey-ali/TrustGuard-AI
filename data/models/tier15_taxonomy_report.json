@@ -1,0 +1,379 @@
+{
+  "generated_at": "2026-08-27T00:46:56Z",
+  "corpus": "data/train/corpus.jsonl",
+  "extra_corpora": [
+    "data/train/augmented.jsonl",
+    "data/train/augmented_urdu.jsonl"
+  ],
+  "corpus_size": 24247,
+  "train_size": 18326,
+  "val_size": 4405,
+  "split": {
+    "strategy": "template_disjoint",
+    "held_out_templates": 90,
+    "total_templates": 425,
+    "rows_dropped_mixed": 1516
+  },
+  "labels": 38,
+  "fit_seconds": 111.33,
+  "inference_ms_per_utterance": 0.311,
+  "model_path": "data/models/tier15_taxonomy.joblib",
+  "metrics": {
+    "micro": {
+      "precision": 0.8306,
+      "recall": 0.831,
+      "f1": 0.8308
+    },
+    "macro": {
+      "precision": 0.8599,
+      "recall": 0.8283,
+      "f1": 0.8261
+    },
+    "benign_no_false_fire_rate": 0.9795,
+    "per_label": {
+      "account_number_request": {
+        "precision": 0.9464,
+        "recall": 0.955,
+        "f1": 0.9507,
+        "support": 111,
+        "threshold": 0.28,
+        "weight": 20,
+        "family": "B"
+      },
+      "authority_claim": {
+        "precision": 0.4796,
+        "recall": 0.7833,
+        "f1": 0.5949,
+        "support": 120,
+        "threshold": 0.14,
+        "weight": 8,
+        "family": "A"
+      },
+      "bank_impersonation": {
+        "precision": 0.8993,
+        "recall": 0.964,
+        "f1": 0.9306,
+        "support": 139,
+        "threshold": 0.44,
+        "weight": 16,
+        "family": "A"
+      },
+      "boundary_probing": {
+        "precision": 0.925,
+        "recall": 0.874,
+        "f1": 0.8988,
+        "support": 127,
+        "threshold": 0.1,
+        "weight": 7,
+        "family": "C"
+      },
+      "courier_impersonation": {
+        "precision": 0.6918,
+        "recall": 0.9806,
+        "f1": 0.8112,
+        "support": 103,
+        "threshold": 0.22,
+        "weight": 10,
+        "family": "A"
+      },
+      "credential_request": {
+        "precision": 0.4248,
+        "recall": 0.8125,
+        "f1": 0.5579,
+        "support": 80,
+        "threshold": 0.18,
+        "weight": 28,
+        "family": "B"
+      },
+      "emotional_exploitation": {
+        "precision": 0.9231,
+        "recall": 0.5714,
+        "f1": 0.7059,
+        "support": 105,
+        "threshold": 0.22,
+        "weight": 10,
+        "family": "C"
+      },
+      "employer_recruiter_impersonation": {
+        "precision": 0.9652,
+        "recall": 0.9737,
+        "f1": 0.9694,
+        "support": 114,
+        "threshold": 0.1,
+        "weight": 12,
+        "family": "A"
+      },
+      "escalation_after_hesitation": {
+        "precision": 0.3636,
+        "recall": 0.3964,
+        "f1": 0.3793,
+        "support": 111,
+        "threshold": 0.1,
+        "weight": 12,
+        "family": "C"
+      },
+      "false_credibility_props": {
+        "precision": 0.5333,
+        "recall": 0.9412,
+        "f1": 0.6809,
+        "support": 119,
+        "threshold": 0.2,
+        "weight": 9,
+        "family": "C"
+      },
+      "family_impersonation": {
+        "precision": 0.97,
+        "recall": 0.9604,
+        "f1": 0.9652,
+        "support": 101,
+        "threshold": 0.44,
+        "weight": 14,
+        "family": "A"
+      },
+      "government_impersonation": {
+        "precision": 0.9362,
+        "recall": 0.9778,
+        "f1": 0.9565,
+        "support": 90,
+        "threshold": 0.3,
+        "weight": 16,
+        "family": "A"
+      },
+      "investment_pitch": {
+        "precision": 0.9868,
+        "recall": 1.0,
+        "f1": 0.9934,
+        "support": 75,
+        "threshold": 0.16,
+        "weight": 12,
+        "family": "B"
+      },
+      "isolation_pressure": {
+        "precision": 0.5263,
+        "recall": 0.7627,
+        "f1": 0.6228,
+        "support": 118,
+        "threshold": 0.82,
+        "weight": 12,
+        "family": "C"
+      },
+      "known_contact_context": {
+        "precision": 0.9512,
+        "recall": 0.4286,
+        "f1": 0.5909,
+        "support": 91,
+        "threshold": 0.1,
+        "weight": -8,
+        "family": "D"
+      },
+      "legitimate_otp_context": {
+        "precision": 0.8902,
+        "recall": 0.869,
+        "f1": 0.8795,
+        "support": 84,
+        "threshold": 0.1,
+        "weight": -12,
+        "family": "D"
+      },
+      "otp_harvesting": {
+        "precision": 0.9688,
+        "recall": 0.7266,
+        "f1": 0.8304,
+        "support": 128,
+        "threshold": 0.7,
+        "weight": 30,
+        "family": "B"
+      },
+      "payment_redirection": {
+        "precision": 0.964,
+        "recall": 0.9224,
+        "f1": 0.9427,
+        "support": 116,
+        "threshold": 0.26,
+        "weight": 16,
+        "family": "B"
+      },
+      "payment_request_disguised_as_receipt": {
+        "precision": 1.0,
+        "recall": 0.9725,
+        "f1": 0.986,
+        "support": 109,
+        "threshold": 0.48,
+        "weight": 24,
+        "family": "B"
+      },
+      "persistence_repetition": {
+        "precision": 0.9746,
+        "recall": 0.92,
+        "f1": 0.9465,
+        "support": 125,
+        "threshold": 0.52,
+        "weight": 6,
+        "family": "C"
+      },
+      "platform_migration": {
+        "precision": 0.9904,
+        "recall": 0.9904,
+        "f1": 0.9904,
+        "support": 104,
+        "threshold": 0.24,
+        "weight": 8,
+        "family": "C"
+      },
+      "platform_official_channel": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 176,
+        "threshold": 0.26,
+        "weight": -6,
+        "family": "D"
+      },
+      "prize_lottery_claim": {
+        "precision": 0.7905,
+        "recall": 0.975,
+        "f1": 0.8731,
+        "support": 120,
+        "threshold": 0.14,
+        "weight": 12,
+        "family": "B"
+      },
+      "rapid_intimacy": {
+        "precision": 0.98,
+        "recall": 0.9159,
+        "f1": 0.9469,
+        "support": 107,
+        "threshold": 0.5,
+        "weight": 9,
+        "family": "C"
+      },
+      "remittance_request": {
+        "precision": 0.9806,
+        "recall": 0.9439,
+        "f1": 0.9619,
+        "support": 107,
+        "threshold": 0.36,
+        "weight": 14,
+        "family": "B"
+      },
+      "secrecy_request": {
+        "precision": 0.9381,
+        "recall": 0.9192,
+        "f1": 0.9286,
+        "support": 99,
+        "threshold": 0.54,
+        "weight": 10,
+        "family": "C"
+      },
+      "suspicious_link": {
+        "precision": 0.9545,
+        "recall": 0.9921,
+        "f1": 0.973,
+        "support": 127,
+        "threshold": 0.28,
+        "weight": 15,
+        "family": "B"
+      },
+      "tech_support_impersonation": {
+        "precision": 0.9643,
+        "recall": 0.9076,
+        "f1": 0.9351,
+        "support": 119,
+        "threshold": 0.22,
+        "weight": 12,
+        "family": "A"
+      },
+      "telecom_impersonation": {
+        "precision": 0.9651,
+        "recall": 0.8737,
+        "f1": 0.9171,
+        "support": 95,
+        "threshold": 0.18,
+        "weight": 12,
+        "family": "A"
+      },
+      "threat_intimidation": {
+        "precision": 0.9694,
+        "recall": 0.8879,
+        "f1": 0.9268,
+        "support": 107,
+        "threshold": 0.68,
+        "weight": 14,
+        "family": "C"
+      },
+      "trust_acceleration": {
+        "precision": 0.8814,
+        "recall": 0.4194,
+        "f1": 0.5683,
+        "support": 124,
+        "threshold": 0.28,
+        "weight": 8,
+        "family": "C"
+      },
+      "unsolicited_contact_origin": {
+        "precision": 0.7093,
+        "recall": 0.8531,
+        "f1": 0.7746,
+        "support": 143,
+        "threshold": 0.18,
+        "weight": 6,
+        "family": "C"
+      },
+      "upfront_fee_demand": {
+        "precision": 0.9512,
+        "recall": 0.8298,
+        "f1": 0.8864,
+        "support": 94,
+        "threshold": 0.36,
+        "weight": 18,
+        "family": "B"
+      },
+      "urgency_pressure": {
+        "precision": 0.9813,
+        "recall": 0.9459,
+        "f1": 0.9633,
+        "support": 111,
+        "threshold": 0.5,
+        "weight": 10,
+        "family": "C"
+      },
+      "utility_impersonation": {
+        "precision": 0.9901,
+        "recall": 0.9174,
+        "f1": 0.9524,
+        "support": 109,
+        "threshold": 0.68,
+        "weight": 12,
+        "family": "A"
+      },
+      "verifiable_identity": {
+        "precision": 0.8571,
+        "recall": 0.2439,
+        "f1": 0.3797,
+        "support": 123,
+        "threshold": 0.7,
+        "weight": -8,
+        "family": "D"
+      },
+      "verification_avoidance": {
+        "precision": 0.4528,
+        "recall": 0.2553,
+        "f1": 0.3265,
+        "support": 94,
+        "threshold": 0.22,
+        "weight": 12,
+        "family": "C"
+      },
+      "wallet_impersonation": {
+        "precision": 1.0,
+        "recall": 0.8113,
+        "f1": 0.8958,
+        "support": 106,
+        "threshold": 0.8,
+        "weight": 15,
+        "family": "A"
+      }
+    }
+  },
+  "note": "Trained on synthetic corpus only. tests/golden_set/ is held out so scripts/eval.py remains an honest measurement."
+}

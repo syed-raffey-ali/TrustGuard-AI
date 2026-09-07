@@ -1,0 +1,46 @@
+{
+  "id": "gs_003",
+  "label": "scam",
+  "expected_band": "critical",
+  "family": "bank_impersonation",
+  "language": "urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "السلام علیکم، میں اپنا بینک کے فراڈ ڈیپارٹمنٹ سے بول رہا ہوں۔ آپ کے اکاؤنٹ سے پیسے کٹنے کی کوشش ہوئی ہے۔"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "اللہ! پھر کیا کرنا ہے؟"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 40,
+      "text": "فوراً ویریفیکیشن کوڈ بتائیں جو ابھی آپ کو ایس ایم ایس آ رہا ہے۔"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 60,
+      "text": "جلدی کریں، دس منٹ کے اندر اکاؤنٹ بلاک ہو جائے گا۔"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 72,
+      "text": "کوڈ آ گیا ہے، ۴۴۳۲۱۔"
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 122,
+      "text": "شکریہ۔ کسی کو نہ بتانا اس بارے میں، خفیہ تفتیش چل رہی ہے۔"
+    }
+  ]
+}

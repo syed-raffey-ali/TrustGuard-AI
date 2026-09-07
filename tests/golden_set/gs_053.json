@@ -1,0 +1,34 @@
+{
+  "id": "gs_053",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "grocery_list",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Bazaar jaa rahe ho? List bhejo: doodh, anday, dhania, aur 1 kg tamatar."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Ji ammi kuch aur? Chawal khatam ho gaye thay kal."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 25,
+      "text": "Haan haan 5 kg basmati bhi le aao, aur sabzi mandi se lena sasta parega."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 45,
+      "text": "Theek hai ammi, 30 minute mein pohanch jaunga."
+    }
+  ]
+}

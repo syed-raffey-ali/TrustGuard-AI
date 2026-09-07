@@ -1,0 +1,40 @@
+{
+  "id": "gs_006",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "government_impersonation",
+  "language": "urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "میں نادرا آفس سے بول رہا ہوں۔ آپ کا شناختی کارڈ دھوکہ دہی کے لیے استعمال ہوا ہے۔"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "یہ کیسے ممکن ہے؟"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 45,
+      "text": "سِمز آپ کے نام پر ریجسٹرڈ ہیں۔ تحقیقات کے لیے فوراً اپنا CNIC نمبر اور ماں کا نام بتائیں۔"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 65,
+      "text": "کیا یہ برانچ میں ہو سکتا ہے؟"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 100,
+      "text": "وقت نہیں ہے۔ ابھی بتائیں ورنہ تمام سِم بلاک کر دی جائیں گی اور فوجی کیس بنے گا۔"
+    }
+  ]
+}

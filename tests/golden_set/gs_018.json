@@ -1,0 +1,46 @@
+{
+  "id": "gs_018",
+  "label": "scam",
+  "expected_band": "medium",
+  "family": "utility_impersonation",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "WAPDA billing office se baat kar raha hoon. Aap ka bijli bill 3 mahin se pending hai."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Bill to main ne jama kiya tha copy ke sath."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Record mein pending hai. Connection aaj raat 8 baje kat jaye ga."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 48,
+      "text": "Turant 8,400 rupay technician ko is Easypaisa number par bhejo, reconnection foran hoga."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 60,
+      "text": "Office ja kar clear kar loonga main."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 105,
+      "text": "Office band ho jaye ga 5 baje. Jaldi karo, warning sirf ek baar de raha hoon."
+    }
+  ]
+}

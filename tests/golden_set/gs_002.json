@@ -1,0 +1,46 @@
+{
+  "id": "gs_002",
+  "label": "scam",
+  "expected_band": "critical",
+  "family": "bank_impersonation",
+  "language": "english",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Hello, this is Metro Commercial Bank security department. There is an unauthorized transfer attempt on your savings account."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Oh no, what should I do?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 35,
+      "text": "We can block it right now. We have sent a one-time password to your registered number."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 53,
+      "text": "Read me the OTP so I can cancel the transaction immediately."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 63,
+      "text": "Wait, should I not call the branch first?"
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 108,
+      "text": "There is no time! Within 5 minutes the money will be gone. Do not tell anyone, this is a confidential investigation."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "gs_054",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "carpool_plan",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Bhai kal office carpool? Meri gaadi service par hai to aap le lo?"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "No problem yaar, 8:30 nikalein ge aap se?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 26,
+      "text": "Perfect timing. Petrol share kar doonga obviously."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 44,
+      "text": "Aray choro yaar, aap roz kaafi contribute karte ho. Chalo 8:30."
+    }
+  ]
+}

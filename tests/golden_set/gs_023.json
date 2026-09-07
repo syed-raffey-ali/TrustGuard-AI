@@ -1,0 +1,40 @@
+{
+  "id": "gs_023",
+  "label": "scam",
+  "expected_band": "medium",
+  "family": "employer_recruiter_impersonation",
+  "language": "english",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Hi! We saw your profile on a jobs page. Work-from-home data entry — 4,000 PKR daily, paid every night."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Sounds good, what is the catch?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 35,
+      "text": "No catch. You just pay a one-time advance deposit of 3,000 for your software license and portal login."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 53,
+      "text": "Can the company deduct it from my first salary instead?"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 95,
+      "text": "Company policy says no advance without deposit. Only 2 slots left today — decide fast."
+    }
+  ]
+}

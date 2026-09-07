@@ -1,0 +1,40 @@
+{
+  "id": "gs_039",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "doctor_appointment",
+  "language": "english",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Good morning, this is Dr. Raza's clinic confirming your appointment tomorrow at 5 PM."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Yes that works. What about the consultation fee?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "It's 2,500 payable at reception when you arrive. Please bring your previous reports if any."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 52,
+      "text": "Noted, thank you. Should I come fasting for the blood test?"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 77,
+      "text": "Yes please, fasting from midnight. See you tomorrow!"
+    }
+  ]
+}

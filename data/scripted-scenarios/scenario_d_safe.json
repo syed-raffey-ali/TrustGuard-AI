@@ -1,0 +1,14 @@
+{
+  "id": "scenario_d",
+  "name": "False-positive check — legit conversation mentioning OTP + investment",
+  "channel": "chat",
+  "expected_band": "low",
+  "notes": "Must stay Low: legitimate_otp_context counter-signal fires; keywords alone never panic the system.",
+  "messages": [
+    {"speaker": "them", "pause_ms": 1200, "text": "Beta, main apne mobile banking se login kar raha thi, OTP aaya hai use this code to log in to your own account wala step samajh nahi aya"},
+    {"speaker": "me", "pause_ms": 1300, "text": "Abbu woh code sirf aap ke apne login ka hai, kisi ko batana nahi hai. Sirf app mein daal dein."},
+    {"speaker": "them", "pause_ms": 1200, "text": "Ho gaya, login ho gaya. Shukriya beta."},
+    {"speaker": "me", "pause_ms": 1400, "text": "Aur haan, jo prize lottery ka message aya tha kal, us par click mat karna. Woh scam hota hai."},
+    {"speaker": "them", "pause_ms": 1100, "text": "Nahi beta, main aise messages delete kar deta hoon. Chalo phir Sunday ko milte hain."}
+  ]
+}

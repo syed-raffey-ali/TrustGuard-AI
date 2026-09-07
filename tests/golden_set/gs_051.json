@@ -1,0 +1,34 @@
+{
+  "id": "gs_051",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "gym_schedule",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Bro kal leg day hai, mat bhoolna 😂 6 baje sharp gym."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Yaar legs... fine fine, aa raha hoon. Protein shake le aana mera."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 25,
+      "text": "Done bhai. Naya trainer bhi aya hai, form check karwa lein ge squats mein."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 45,
+      "text": "Sounds good, see you tomorrow."
+    }
+  ]
+}

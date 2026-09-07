@@ -1,0 +1,34 @@
+{
+  "id": "gs_052",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "book_club",
+  "language": "english",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Hey! This month we're reading 'The Kite Runner' — discussion next Saturday at my place."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Loved that book! I'm in. Should I bring anything?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 28,
+      "text": "Just your notes and maybe snacks to share ☺️"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 48,
+      "text": "Deal. Sending the calendar invite now."
+    }
+  ]
+}

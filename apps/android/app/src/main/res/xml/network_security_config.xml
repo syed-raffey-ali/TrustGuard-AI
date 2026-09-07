@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Demo/prototype network policy: the gateway runs as plain HTTP on the LAN
+  (user-configured IP:8080, e.g. 10.0.2.2 on an emulator or 192.168.x.x for
+  physical devices). Permit cleartext to any host so registration, chat and
+  call WebSockets can reach it. For a production build, restrict this to the
+  real backend domain and serve HTTPS.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

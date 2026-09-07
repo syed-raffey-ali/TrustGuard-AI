@@ -1,0 +1,34 @@
+{
+  "id": "gs_049",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "tuition_fee_reminder",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Beta yeh mahine ki tuition fee teacher ko de dena kal, main bahar hoon."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Ji Abbu, 5,000 hai na? Main shaam ko de kar receipt le aaunga."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Haan beta shukriya. Teacher ko mera salam kehna."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 52,
+      "text": "Zaroor Abbu. Kuch aur kaam yaad dila dein?"
+    }
+  ]
+}

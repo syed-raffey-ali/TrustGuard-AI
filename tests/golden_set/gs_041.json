@@ -1,0 +1,34 @@
+{
+  "id": "gs_041",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "weekend_plans",
+  "language": "english",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Yo! Sunday ko beach chalein? Weather looks amazing this weekend."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Count me in! Should we ask Danish and Faisal too?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 25,
+      "text": "Already did, they're bringing the cricket kit. I'll handle food."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 45,
+      "text": "Perfect. Let's meet at my place at 7 AM then."
+    }
+  ]
+}

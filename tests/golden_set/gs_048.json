@@ -1,0 +1,34 @@
+{
+  "id": "gs_048",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "cooking_recipe",
+  "language": "urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "بیٹا بریانی میں آلو ڈالنے کا طریقہ بتاؤ، تمہاری امی کی طرح بناتی ہو؟"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "اممی! پہلے آلو بوائل کرو پھر تھوڑا سا فرائی کر لیں، مصالحے کے بعد ڈالیں۔"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "دہی کب ڈالتے ہیں؟"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 58,
+      "text": "سب سے آخر میں، دم پر۔ اور پانی کم رکھنا۔ شکریہ سمجھ گیا!"
+    }
+  ]
+}

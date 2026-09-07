@@ -1,0 +1,46 @@
+{
+  "id": "gs_016",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "telecom_impersonation",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "PTA se official call hai. Aap ke CNIC par registered 6 SIMs hain jin ka misuse ho raha hai."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Sirf 2 SIM meri hain to baaki kiski?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 32,
+      "text": "Wahi to problem hai. Block karwane ke liye hum ne aap ko verification code bheja hai."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 50,
+      "text": "Code yahan type kar dein ya bata dein, main note kar leta hoon."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 62,
+      "text": "Code 55098 aa gaya."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 104,
+      "text": "Perfect. Ab biometric verify karne ke liye 999 rupay charge bhejein Easypaisa se, process turant start hoga."
+    }
+  ]
+}

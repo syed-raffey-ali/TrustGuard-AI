@@ -1,0 +1,34 @@
+{
+  "id": "gs_044",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "office_meeting",
+  "language": "english",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Hi team, pushing today's standup to 11 AM — client call ran over."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Works for me. I'll share the sprint board link before then."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 20,
+      "text": "Great. Also remember Friday demo is moved to next Wednesday, PM confirmed."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 38,
+      "text": "Awesome, one less deadline this week 😅"
+    }
+  ]
+}

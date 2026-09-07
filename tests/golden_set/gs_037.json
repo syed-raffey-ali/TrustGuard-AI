@@ -1,0 +1,40 @@
+{
+  "id": "gs_037",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "benign_investment_talk",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Abbu main soch raha hoon salary se thora saving National Savings mein dal doon, profit rate theek hai."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Acha beta, lekin pehle mahine ka budget dekho, phir jo bachey invest karo."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "me",
+      "timestamp_offset_s": 40,
+      "text": "Haan main ne calculator laga liya, 15% ghar ke expenses kam kar sakta hoon easily."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 75,
+      "text": "Shabash. Aur crypto wagera se door rehna, woh sab double paisa walay fraud hotay hain."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 105,
+      "text": "Ji Abbu, main sirf government schemes par trust karta hoon. Chalo phir Sunday ko branch chalte hain."
+    }
+  ]
+}

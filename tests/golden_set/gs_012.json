@@ -1,0 +1,40 @@
+{
+  "id": "gs_012",
+  "label": "scam",
+  "expected_band": "medium",
+  "family": "wallet_impersonation",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Assalam o Alaikum, Raast payment agent. Aap ko government ki relief wali 12,000 rupay milegi."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Kis scheme ki baat kar rahe hain?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 40,
+      "text": "Ehsaas program. Bas pehle 500 registration fee bhejo, phir 12 hazar foran aayenge."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 58,
+      "text": "Fee kyun? Relief to free hoti hai."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 113,
+      "text": "Madam system mein fee ke baghair entry nahi hoti. Aaj last day hai, jaldi karo."
+    }
+  ]
+}

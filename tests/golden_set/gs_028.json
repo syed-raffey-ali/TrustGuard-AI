@@ -1,0 +1,46 @@
+{
+  "id": "gs_028",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "romance",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Jaan aaj bohot udaas tha office mein, sirf aap ki baaton ne sambhala 😔"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Aww mere paas hi to ho, sab bataya karo."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 50,
+      "text": "Wahi to... ek secret share karoon? Main crypto futures mein trade karta hoon, is hafte $4000 kamaye."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 130,
+      "text": "Itne to hamare saal bhar ki salary nahi!"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 190,
+      "text": "Aap bhi join karo, main sikhaoonga step by step. Binance account banao aur pehle 30,000 dal do."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 230,
+      "text": "Aur please apni family ko abhi mat batana, shaadi se pehle unhein shock na ho. Trust me?"
+    }
+  ]
+}

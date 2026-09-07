@@ -1,0 +1,40 @@
+{
+  "id": "gs_035",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "remittance_request",
+  "language": "urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "السلام علیکم جناب، دبئی سے آپ کے دوست فیصل کا پیغام ہے۔ وہ مصروف ہیں اس لیے مجھے پیغام دیا۔"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "فیصل؟ اچھا بتائیں۔"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 35,
+      "text": "ان کا کاروباری سودا کل فائنل ہونا ہے اور ان کا بینک ٹرانسفر رک گیا ہے۔ آپ فوری طور پر تین لاکھ روپے میری کمپنی اکاؤنٹ میں بھیج دیں۔"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 55,
+      "text": "اتنے پیسے؟ میں پہلے خود فیصل سے بات کرتا ہوں۔"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 100,
+      "text": "وہ فلائٹ پر ہیں کوئی کال نہیں لگا سکتے۔ ویسترن یونین سے بھیجیں، سودا ڈوب جائے گا ورنہ۔ جلدی کریں آج کی آخری ٹائم ہے۔"
+    }
+  ]
+}

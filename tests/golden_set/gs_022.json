@@ -1,0 +1,46 @@
+{
+  "id": "gs_022",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "employer_recruiter_impersonation",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Congrats! Aap ka CV shortlist hua hai Multinational Textiles ke liye. Main HR Manager Adnan bol raha hoon."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Oh great! Kab interview hai?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Pehle onboarding complete karni hai. 5,000 ka refundable registration deposit chahiye, joining ke baad wapas."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 48,
+      "text": "Ye EasyPaisa number hai: 0301-XXXXX44. Deposit ke baad appointment letter foran issue hota hai."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 62,
+      "text": "Theek hai, shaam tak bhej deta hoon."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 110,
+      "text": "Aaj hi karo, sirf 2 seats hain aur time nahi hai. HR group mein kisi ko batana nahi."
+    }
+  ]
+}

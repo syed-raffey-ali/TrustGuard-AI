@@ -1,0 +1,24 @@
+{
+  "id": "scenario_b",
+  "name": "Bank impersonation + OTP harvesting (FLAGSHIP)",
+  "channel": "voice",
+  "expected_band": "critical",
+  "notes": "Director plays pre-recorded clips of these lines on Phone B. OTP-format text lands on the linked chat channel at step 5 (Phase 2.5). All bank names fictional.",
+  "lines": [
+    {"n": 1, "speaker": "them", "pause_ms": 2500,
+     "text": "Hello? Assalam o Alaikum, main ApnaBank fraud department se bol raha hoon. Mera officer ID hai AB-4471."},
+    {"n": 2, "speaker": "them", "pause_ms": 3000,
+     "text": "Madam, aap ke account se ek suspicious transaction detect hui hai — pachaas hazaar rupay. Case number FC-8823 darj kar diya gaya hai."},
+    {"n": 3, "speaker": "me", "pause_ms": 2500,
+     "text": "Transaction? Maine kuch nahi kiya! Yeh kaisi baat hai?"},
+    {"n": 4, "speaker": "them", "pause_ms": 2000,
+     "text": "Bilkul sahi pakra aap ne. Isi liye to main call kar raha hoon. Account block hone se pehle verification zaroori hai — turant."},
+    {"n": 5, "speaker": "them", "pause_ms": 2500,
+     "cross_channel_otp_text": "ApnaBank: OTP 558213 for your fraud-dispute verification. Code batao to caller.",
+     "text": "Main ne abhi aap ke number par ek code bheja hai. Woh OTP mujhe read kar dein, main transaction rok deta hoon."},
+    {"n": 6, "speaker": "me", "pause_ms": 3000,
+     "text": "Code aa gaya... 5 5 8 2 1 3."},
+    {"n": 7, "speaker": "them", "pause_ms": 2000,
+     "text": "Perfect. Ek aur cheez — yeh baat kisi ko na batana, na family ko na branch walo ko. Confidential investigation chal rahi hai."}
+  ]
+}

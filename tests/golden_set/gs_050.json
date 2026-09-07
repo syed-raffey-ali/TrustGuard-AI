@@ -1,0 +1,40 @@
+{
+  "id": "gs_050",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "flight_booking_help",
+  "language": "english",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Beta I found a good flight for your Umrah trip — PIA direct, 145,000 return."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "That's reasonable Ammi. Book it through the official website only, okay?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 30,
+      "text": "Yes yes, your uncle will help me pay by card at his office."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 55,
+      "text": "Great. Send me the booking reference once done, I'll verify it online myself."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 75,
+      "text": "Sure beta. May Allah bless you."
+    }
+  ]
+}

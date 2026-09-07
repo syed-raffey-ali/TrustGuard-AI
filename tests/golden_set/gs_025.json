@@ -1,0 +1,40 @@
+{
+  "id": "gs_025",
+  "label": "scam",
+  "expected_band": "medium",
+  "family": "courier_impersonation",
+  "language": "mixed",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Leopard courier! Aap ke liye gift hamper aaya hai — iPhone aur perfume 🎁 Free hai bas delivery charges hain."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Kaun bhej raha hai?"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 28,
+      "text": "Surprise hai shayad koi apna. Sirf 950 rupay advance delivery fee hai, COD system change ho gaya."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 43,
+      "text": "Address batao main khud le loon office se."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 83,
+      "text": "Warehouse door hai sir, fee pehle online hogi phir address share hota hai. Jaldi karo offer expire ho raha hai."
+    }
+  ]
+}

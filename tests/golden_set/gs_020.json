@@ -1,0 +1,46 @@
+{
+  "id": "gs_020",
+  "label": "scam",
+  "expected_band": "high",
+  "family": "tech_support_impersonation",
+  "language": "english",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Hello sir, I am calling from Microsoft technical support department. Your computer is sending error reports to our server."
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Is it a virus? I do banking on that laptop!"
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 32,
+      "text": "Exactly why you must act now. Your bank app is compromised. We will fix it remotely."
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "them",
+      "timestamp_offset_s": 52,
+      "text": "Install the remote app from this link: bit.ly/secure-fix-24 and enter the code I give you."
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "me",
+      "timestamp_offset_s": 67,
+      "text": "Okay downloading it now."
+    },
+    {
+      "message_id": "m_6",
+      "speaker": "them",
+      "timestamp_offset_s": 117,
+      "text": "Good. Now read me the one-time password showing on your screen so I can complete the secure connection."
+    }
+  ]
+}

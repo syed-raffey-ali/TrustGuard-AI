@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+dist/
+.env
+data/providers.json
+data/model_comparisons_*.jsonl
+eval_results.json
+*.db
+apps/android/.gradle/
+apps/android/app/build/
+apps/android/local.properties
+.DS_Store
+
+# Trained-tier artifacts: regenerate with ml.datagen + ml.train, never load a
+# .joblib from an untrusted source (joblib.load unpickles).
+data/models/*.joblib
+data/models/*.onnx
+data/train/*.jsonl

@@ -1,0 +1,40 @@
+{
+  "id": "gs_043",
+  "label": "safe",
+  "expected_band": "low",
+  "family": "delivery_coordination",
+  "language": "roman_urdu",
+  "channel": "text",
+  "messages": [
+    {
+      "message_id": "m_1",
+      "speaker": "them",
+      "timestamp_offset_s": 0,
+      "text": "Bhai rider bol raha hoon, parcel delivery karna hai Gulberg mein. Address confirm kar dein?"
+    },
+    {
+      "message_id": "m_2",
+      "speaker": "me",
+      "timestamp_offset_s": 0,
+      "text": "Ji house 12, street 4, near Jamia Masjid. Ring the bell twice."
+    },
+    {
+      "message_id": "m_3",
+      "speaker": "them",
+      "timestamp_offset_s": 25,
+      "text": "Noted sir. COD hai ya paid already?"
+    },
+    {
+      "message_id": "m_4",
+      "speaker": "me",
+      "timestamp_offset_s": 45,
+      "text": "Already paid online. Thank you!"
+    },
+    {
+      "message_id": "m_5",
+      "speaker": "them",
+      "timestamp_offset_s": 63,
+      "text": "On my way, 20 minutes mein pohanch jaunga InshaAllah."
+    }
+  ]
+}
